@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController // Déclare cette classe comme un contrôleur REST
-public class FirestationController {
+public class  FirestationController {
 
     private final FirestationService firestationService; // Service pour les casernes
     private static final Logger logger = LoggerFactory.getLogger(FirestationController.class); // Logger pour les requêtes
