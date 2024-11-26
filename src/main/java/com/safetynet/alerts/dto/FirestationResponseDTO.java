@@ -7,6 +7,7 @@ public class FirestationResponseDTO {
     private List<PersonInfoDTO> persons;
     private  int numberOfAdults;
     private  int numberOfChildren;
+
     // Getters et Setters
     public List<PersonInfoDTO> getPersons() {
         return persons;
