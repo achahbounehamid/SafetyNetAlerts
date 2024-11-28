@@ -3,10 +3,11 @@ package com.safetynet.alerts.service;
 import com.safetynet.alerts.dto.FireDTO;
 import com.safetynet.alerts.model.DataWrapper;
 import com.safetynet.alerts.model.MedicalRecord;
+import com.safetynet.alerts.model.Person;
+import com.safetynet.alerts.model.Firestation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import com.safetynet.alerts.model.Firestation;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -31,7 +32,7 @@ public class FireService {
 
         logger.info("Recherche des habitants pour l'adresse : {}", address);
 
-        // Trouve la caserne associée à l'adresse
+        // Trouve le numéro de la station associée à l'adresse
         String stationNumber = data.getFirestations().stream()
                 .filter(firestation -> firestation.getAddress().equals(address))
                 .map(Firestation::getStation)
@@ -39,22 +40,24 @@ public class FireService {
                 .orElse(null);
 
         if (stationNumber == null) {
-            logger.warn("Aucune station trouvée pour l'adresse {}", address);
+            logger.warn("Aucune caserne trouvée pour l'adresse {}", address);
             return Collections.emptyList();
         }
 
         logger.info("Station associée : {}", stationNumber);
 
-        // Récupère les résidents à l'adresse
+        // Récupère les résidents à l'adresse et mappe les données en FireDTO
         return data.getPersons().stream()
                 .filter(person -> person.getAddress().equals(address))
                 .map(person -> {
+                    // Recherche du dossier médical pour chaque personne
                     MedicalRecord record = data.getMedicalRecords().stream()
                             .filter(medicalRecord -> medicalRecord.getFirstName().equals(person.getFirstName())
                                     && medicalRecord.getLastName().equals(person.getLastName()))
                             .findFirst()
                             .orElse(null);
 
+                    // Crée un FireDTO avec les données collectées
                     return new FireDTO(
                             person.getFirstName(),
                             person.getLastName(),
@@ -62,7 +65,7 @@ public class FireService {
                             person.getPhone(),
                             record != null ? record.getMedications() : Collections.emptyList(),
                             record != null ? record.getAllergies() : Collections.emptyList(),
-                            stationNumber
+                            stationNumber // Ajoute le numéro de station
                     );
                 })
                 .collect(Collectors.toList());
@@ -75,4 +78,3 @@ public class FireService {
         return Period.between(birthDate, LocalDate.now()).getYears();
     }
 }
-

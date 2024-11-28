@@ -2,6 +2,7 @@ package com.safetynet.alerts.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 import java.util.List;
 
 public class MedicalRecord {

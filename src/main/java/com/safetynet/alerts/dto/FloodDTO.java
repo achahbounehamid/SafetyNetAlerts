@@ -2,24 +2,25 @@ package com.safetynet.alerts.dto;
 
 import java.util.List;
 
-public class FireDTO {
-    private String firstName;
+public class FloodDTO {
     private String lastName;
+    private String firstName;
     private int age;
     private  String phone;
     private List<String> medications;
     private List<String> allergies;
-    private  String station;
+    private String address;
 
-    public FireDTO(String firstName, String lastName, int age, String phone, List<String> medications, List<String> allergies, String station) {
-        this.firstName = firstName;
+    public FloodDTO(String lastName, String firstName, List<String> allergies, List<String> medications, String phone, int age, String address) {
         this.lastName = lastName;
-        this.age = age;
-        this.phone = phone;
-        this.medications = medications;
+        this.firstName = firstName;
         this.allergies = allergies;
-        this.station = station;
+        this.medications = medications;
+        this.phone = phone;
+        this.age = age;
+        this.address = address;
     }
+
 
     public String getFirstName() {
         return firstName;
@@ -43,6 +44,14 @@ public class FireDTO {
 
     public void setMedications(List<String> medications) {
         this.medications = medications;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getPhone() {
