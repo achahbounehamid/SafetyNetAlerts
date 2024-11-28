@@ -75,6 +75,6 @@ public class PersonInfoLastNameDTO {
     }
 
     public void setAllergies(List<String> allergies) {
-        this.allergies = allergies;
-    }
+       this.allergies = allergies;
+   }
 }

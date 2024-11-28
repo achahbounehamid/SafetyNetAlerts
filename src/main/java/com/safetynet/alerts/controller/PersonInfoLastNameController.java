@@ -17,7 +17,7 @@ public class PersonInfoLastNameController {
         this.personInfoLastNameService = personInfoLastNameService;
     }
 
-    @GetMapping("/personInfoLastName")
+    @GetMapping("/personInfoLastName={lastName}")
     public List<PersonInfoLastNameDTO> getPersonByLastName(@RequestParam String lastName) {
         return personInfoLastNameService.getPersonByLastName(lastName);
     }

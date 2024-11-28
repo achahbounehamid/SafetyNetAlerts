@@ -6,6 +6,7 @@ import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.model.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -14,7 +15,7 @@ import java.time.format.DateTimeParseException;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-
+@Service
 public class PersonInfoLastNameService {
     private final DataService dataService;
     private static final Logger logger = LoggerFactory.getLogger(PersonInfoLastNameService.class);
@@ -31,16 +32,13 @@ public class PersonInfoLastNameService {
         return data.getPersons().stream()
                 .filter(person -> person.getLastName().equalsIgnoreCase(lastName)) // Filtre par nom de famille
                 .map(person -> {
-                    // Recherche du dossier médical associé
                     MedicalRecord record = data.getMedicalRecords().stream()
-                            .filter(medicalRecord -> medicalRecord.getFirstName().equals(person.getFirstName())
-                                    && medicalRecord.getLastName().equals(person.getLastName()))
+                            .filter(mr -> mr.getFirstName().equalsIgnoreCase(person.getFirstName())
+                                    && mr.getLastName().equalsIgnoreCase(person.getLastName()))
                             .findFirst()
                             .orElse(null);
 
-                    // Crée un DTO avec les informations collectées
                     return new PersonInfoLastNameDTO(
-
                             person.getFirstName(),
                             person.getLastName(),
                             person.getAddress(),
@@ -48,13 +46,13 @@ public class PersonInfoLastNameService {
                             calculateAge(record != null ? record.getBirthdate() : null),
                             record != null ? record.getMedications() : Collections.emptyList(),
                             record != null ? record.getAllergies() : Collections.emptyList()
-
                     );
+
                 })
                 .collect(Collectors.toList());
     }
 
-    // Méthode pour calculer l'âge
+        // Méthode pour calculer l'âge
     private int calculateAge(String birthdate) {
         try {
             if (birthdate == null) return 0;
