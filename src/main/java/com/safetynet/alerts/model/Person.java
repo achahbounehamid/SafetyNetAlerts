@@ -1,18 +1,9 @@
 package com.safetynet.alerts.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 
-@Entity
-public class Person {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class  Person {
 
     @NotNull
     private String firstName;
@@ -28,13 +19,9 @@ public class Person {
     @Email
     private String email;
 
-    // **Constructeur par défaut requis par Hibernate**
-    public Person() {
-    }
+    public Person() {}
 
-    // **Constructeur avec des arguments**
-    public Person(Long id, String firstName, String lastName, String address, String city, String zip, String phone, String email) {
-        this.id = id;
+    public Person(String firstName, String lastName, String address, String city, String zip, String phone, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -44,15 +31,7 @@ public class Person {
         this.email = email;
     }
 
-    // Getters et Setters
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
+    // Getters et setters
     public String getFirstName() {
         return firstName;
     }
@@ -109,5 +88,3 @@ public class Person {
         this.email = email;
     }
 }
-
-
