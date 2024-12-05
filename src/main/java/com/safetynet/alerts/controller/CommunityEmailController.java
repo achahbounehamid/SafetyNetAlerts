@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 public class CommunityEmailController {
-
+    private static final Logger logger = LoggerFactory.getLogger(CommunityEmailController.class);
     private final CommunityEmailService communityEmailService;
 
     public CommunityEmailController(CommunityEmailService communityEmailService) {
@@ -20,7 +20,7 @@ public class CommunityEmailController {
     @GetMapping("/communityEmail")
     public List<String> getEmailsByCity(@RequestParam String city) {
         // Log pour suivre la requête
-//        logger.info("Requête reçue pour les e-mails des habitants de la ville : {}", city);
+        logger.info("Requête reçue pour les e-mails des habitants de la ville : {}", city);
 
 
 

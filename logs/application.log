@@ -1,615 +1,144 @@
-2024-12-04T00:30:24.884+01:00  INFO 17544 --- [SafetyNet Alerts] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 40 class path changes (0 additions, 40 deletions, 0 modifications)
-2024-12-04T00:30:24.967+01:00  INFO 17544 --- [SafetyNet Alerts] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T00:30:24.992+01:00  WARN 17544 --- [SafetyNet Alerts] [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-12-04T00:30:24.995+01:00  INFO 17544 --- [SafetyNet Alerts] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-12-04T00:30:25.009+01:00  INFO 17544 --- [SafetyNet Alerts] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-12-04T00:30:25.283+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 22.0.1 with PID 17544 (C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts\target\classes started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
-2024-12-04T00:30:25.283+01:00 DEBUG 17544 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Running with Spring Boot v3.3.5, Spring v6.1.14
-2024-12-04T00:30:25.284+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-12-04T00:30:27.529+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-04T00:30:27.532+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
-2024-12-04T00:30:28.823+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-12-04T00:30:28.826+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-04T00:30:28.828+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2024-12-04T00:30:29.081+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-04T00:30:29.082+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3734 ms
-2024-12-04T00:30:30.074+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2024-12-04T00:30:30.134+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn20: url=jdbc:h2:mem:ebcd671e-6853-4fd8-bedf-7bf5360e71d1 user=SA
-2024-12-04T00:30:30.134+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2024-12-04T00:30:30.135+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ebcd671e-6853-4fd8-bedf-7bf5360e71d1'
-2024-12-04T00:30:30.283+01:00 DEBUG 17544 --- [SafetyNet Alerts] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2024-12-04T00:30:30.476+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-04T00:30:30.486+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-12-04T00:30:30.524+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-04T00:30:30.712+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-12-04T00:30:30.713+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T00:30:30.970+01:00  WARN 17544 --- [SafetyNet Alerts] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-04T00:30:31.324+01:00 DEBUG 17544 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
-2024-12-04T00:30:31.647+01:00 DEBUG 17544 --- [SafetyNet Alerts] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2024-12-04T00:30:31.778+01:00 DEBUG 17544 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-12-04T00:30:31.796+01:00 DEBUG 17544 --- [SafetyNet Alerts] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-12-04T00:30:32.494+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-04T00:30:32.507+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-12-04T00:30:32.593+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-12-04T00:30:32.634+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 7.498 seconds (process running for 2742.386)
-2024-12-04T00:30:32.659+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-12-04T00:30:35.296+01:00  INFO 17544 --- [SafetyNet Alerts] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 44 class path changes (44 additions, 0 deletions, 0 modifications)
-2024-12-04T00:30:35.314+01:00  INFO 17544 --- [SafetyNet Alerts] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T00:30:35.316+01:00  WARN 17544 --- [SafetyNet Alerts] [Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-12-04T00:30:35.321+01:00  INFO 17544 --- [SafetyNet Alerts] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2024-12-04T00:30:35.325+01:00  INFO 17544 --- [SafetyNet Alerts] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2024-12-04T00:30:35.546+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 22.0.1 with PID 17544 (C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts\target\classes started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
-2024-12-04T00:30:35.546+01:00 DEBUG 17544 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Running with Spring Boot v3.3.5, Spring v6.1.14
-2024-12-04T00:30:35.547+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-12-04T00:30:36.504+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-04T00:30:36.626+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 0 JPA repository interfaces.
-2024-12-04T00:30:37.836+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-12-04T00:30:37.843+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-04T00:30:37.844+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2024-12-04T00:30:37.957+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-04T00:30:37.957+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2407 ms
-2024-12-04T00:30:38.186+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2024-12-04T00:30:38.228+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn30: url=jdbc:h2:mem:72d4b968-459e-42e2-993b-12a8f3433973 user=SA
-2024-12-04T00:30:38.229+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2024-12-04T00:30:38.237+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:72d4b968-459e-42e2-993b-12a8f3433973'
-2024-12-04T00:30:38.305+01:00 DEBUG 17544 --- [SafetyNet Alerts] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2024-12-04T00:30:38.409+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-04T00:30:38.424+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-12-04T00:30:38.479+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-04T00:30:38.595+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-12-04T00:30:38.595+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T00:30:38.996+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chargement des données JSON au démarrage de l'application...
-2024-12-04T00:30:38.997+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
-2024-12-04T00:30:38.998+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
-2024-12-04T00:30:39.043+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Données JSON chargées avec succès !
-2024-12-04T00:30:39.326+01:00  WARN 17544 --- [SafetyNet Alerts] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-04T00:30:39.447+01:00 DEBUG 17544 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
-2024-12-04T00:30:39.548+01:00 DEBUG 17544 --- [SafetyNet Alerts] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2024-12-04T00:30:39.611+01:00 DEBUG 17544 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-12-04T00:30:39.626+01:00 DEBUG 17544 --- [SafetyNet Alerts] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-12-04T00:30:40.061+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-04T00:30:40.085+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-12-04T00:30:40.126+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-12-04T00:30:40.149+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 4.695 seconds (process running for 2749.9)
-2024-12-04T00:30:40.152+01:00  INFO 17544 --- [SafetyNet Alerts] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-12-04T00:30:43.986+01:00  INFO 8096 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Starting SafetyNetAlertsApplicationTests using Java 17.0.12 with PID 8096 (started by hacha in C:\wamp64\www\openclassrooms\P5-Cr�ez votre premi�re application web avec Spring Boot\SafetyNetAlerts)
-2024-12-04T00:30:43.989+01:00 DEBUG 8096 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Running with Spring Boot v3.3.5, Spring v6.1.14
-2024-12-04T00:30:43.990+01:00  INFO 8096 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2024-12-04T00:30:44.161+01:00 DEBUG 8096 --- [SafetyNet Alerts] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@738a5848
-2024-12-04T00:30:47.152+01:00  INFO 8096 --- [SafetyNet Alerts] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-04T00:30:47.217+01:00  INFO 8096 --- [SafetyNet Alerts] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 0 JPA repository interfaces.
-2024-12-04T00:30:49.003+01:00  INFO 8096 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-12-04T00:30:49.826+01:00  INFO 8096 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:4a194095-4bfa-4511-b5e9-4355bf320fb2 user=SA
-2024-12-04T00:30:49.832+01:00  INFO 8096 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-12-04T00:30:49.999+01:00  INFO 8096 --- [SafetyNet Alerts] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-04T00:30:50.228+01:00  INFO 8096 --- [SafetyNet Alerts] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-12-04T00:30:50.368+01:00  INFO 8096 --- [SafetyNet Alerts] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-12-04T00:30:51.438+01:00  INFO 8096 --- [SafetyNet Alerts] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-04T00:30:52.888+01:00  INFO 8096 --- [SafetyNet Alerts] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-12-04T00:30:52.905+01:00  INFO 8096 --- [SafetyNet Alerts] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T00:30:53.186+01:00  INFO 8096 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement des donn�es JSON au d�marrage de l'application...
-2024-12-04T00:30:53.187+01:00  INFO 8096 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
-2024-12-04T00:30:53.188+01:00  INFO 8096 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
-2024-12-04T00:30:53.407+01:00  INFO 8096 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Donn�es JSON charg�es avec succ�s !
-2024-12-04T00:30:54.104+01:00  WARN 8096 --- [SafetyNet Alerts] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-04T00:30:54.487+01:00 DEBUG 8096 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
-2024-12-04T00:30:54.680+01:00 DEBUG 8096 --- [SafetyNet Alerts] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2024-12-04T00:30:54.810+01:00 DEBUG 8096 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-12-04T00:30:54.936+01:00 DEBUG 8096 --- [SafetyNet Alerts] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-12-04T00:30:56.067+01:00  INFO 8096 --- [SafetyNet Alerts] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-12-04T00:30:56.252+01:00  INFO 8096 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Started SafetyNetAlertsApplicationTests in 13.311 seconds (process running for 16.907)
-2024-12-04T00:30:58.184+01:00 DEBUG 8096 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@738a5848, started on Wed Dec 04 00:30:44 CET 2024
-2024-12-04T00:30:58.437+01:00  INFO 8096 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T00:30:58.441+01:00  INFO 8096 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-12-04T00:30:58.448+01:00  INFO 8096 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-12-04T00:31:24.678+01:00  INFO 17544 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T00:31:24.680+01:00  WARN 17544 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-12-04T00:31:24.681+01:00  INFO 17544 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2024-12-04T00:31:24.683+01:00  INFO 17544 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2024-12-04T00:31:32.363+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 22.0.1 with PID 18012 (C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts\target\classes started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
-2024-12-04T00:31:32.367+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Running with Spring Boot v3.3.5, Spring v6.1.14
-2024-12-04T00:31:32.369+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-12-04T00:31:32.474+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-12-04T00:31:32.474+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-12-04T00:31:34.784+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-04T00:31:34.833+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 JPA repository interfaces.
-2024-12-04T00:31:36.524+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-12-04T00:31:36.553+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-04T00:31:36.554+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2024-12-04T00:31:36.720+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-04T00:31:36.722+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4246 ms
-2024-12-04T00:31:37.050+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-12-04T00:31:37.357+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:98c06532-aa31-44e9-9e0e-d8c76065b7af user=SA
-2024-12-04T00:31:37.359+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-12-04T00:31:37.380+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:98c06532-aa31-44e9-9e0e-d8c76065b7af'
-2024-12-04T00:31:37.583+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2024-12-04T00:31:37.820+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-04T00:31:37.935+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-12-04T00:31:38.005+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-12-04T00:31:38.704+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-04T00:31:39.362+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-12-04T00:31:39.370+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T00:31:39.587+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chargement des données JSON au démarrage de l'application...
-2024-12-04T00:31:39.587+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
-2024-12-04T00:31:39.589+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
-2024-12-04T00:31:39.713+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Données JSON chargées avec succès !
-2024-12-04T00:31:40.094+01:00  WARN 18012 --- [SafetyNet Alerts] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-04T00:31:40.382+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
-2024-12-04T00:31:40.507+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2024-12-04T00:31:40.626+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-12-04T00:31:40.705+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-12-04T00:31:41.643+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-04T00:31:41.674+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-12-04T00:31:41.822+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-12-04T00:31:41.850+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 10.542 seconds (process running for 11.492)
-2024-12-04T00:34:13.589+01:00  INFO 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-12-04T00:34:13.589+01:00  INFO 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-12-04T00:34:13.589+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2024-12-04T00:34:13.590+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2024-12-04T00:34:13.590+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2024-12-04T00:34:13.593+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1c8e8317
-2024-12-04T00:34:13.594+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@66641cb3
-2024-12-04T00:34:13.595+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2024-12-04T00:34:13.595+01:00  INFO 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2024-12-04T00:34:13.626+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/medicalRecordCRUD", parameters={}
-2024-12-04T00:34:13.637+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#addMedicalRecord(MedicalRecordCRUD)
-2024-12-04T00:34:13.751+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
-2024-12-04T00:34:13.757+01:00  WARN 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.safetynet.alerts.model.MedicalRecordCRUD> com.safetynet.alerts.controller.MedicalRecordControllerCRUD.addMedicalRecord(com.safetynet.alerts.model.MedicalRecordCRUD)]
-2024-12-04T00:34:13.762+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
-2024-12-04T00:34:13.775+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}
-2024-12-04T00:34:13.778+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
-2024-12-04T00:34:13.805+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2024-12-04T00:34:13.808+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed Dec 04 00:34:13 CET 2024, status=400, error=Bad Request, trace=org.springframework.ht (truncated)...]
-2024-12-04T00:34:13.845+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 400
-2024-12-04T00:34:45.513+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/medicalRecordCRUD", parameters={}
-2024-12-04T00:34:45.513+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#addMedicalRecord(MedicalRecordCRUD)
-2024-12-04T00:34:45.522+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to []
-2024-12-04T00:34:45.523+01:00  WARN 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.safetynet.alerts.model.MedicalRecordCRUD> com.safetynet.alerts.controller.MedicalRecordControllerCRUD.addMedicalRecord(com.safetynet.alerts.model.MedicalRecordCRUD)]
-2024-12-04T00:34:45.523+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
-2024-12-04T00:34:45.527+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}
-2024-12-04T00:34:45.528+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
-2024-12-04T00:34:45.529+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2024-12-04T00:34:45.530+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed Dec 04 00:34:45 CET 2024, status=400, error=Bad Request, trace=org.springframework.ht (truncated)...]
-2024-12-04T00:34:45.532+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 400
-2024-12-04T00:35:13.734+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : PUT "/medicalRecordCRUD", parameters={}
-2024-12-04T00:35:13.740+01:00  WARN 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
-2024-12-04T00:35:13.740+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 405 METHOD_NOT_ALLOWED
-2024-12-04T00:35:13.741+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for PUT "/error", parameters={}
-2024-12-04T00:35:13.742+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
-2024-12-04T00:35:13.746+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2024-12-04T00:35:13.747+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed Dec 04 00:35:13 CET 2024, status=405, error=Method Not Allowed, trace=org.springframe (truncated)...]
-2024-12-04T00:35:13.749+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 405
-2024-12-04T00:35:59.367+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/medicalRecordCRUD", parameters={}
-2024-12-04T00:35:59.367+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#addMedicalRecord(MedicalRecordCRUD)
-2024-12-04T00:35:59.368+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to []
-2024-12-04T00:35:59.369+01:00  WARN 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.safetynet.alerts.model.MedicalRecordCRUD> com.safetynet.alerts.controller.MedicalRecordControllerCRUD.addMedicalRecord(com.safetynet.alerts.model.MedicalRecordCRUD)]
-2024-12-04T00:35:59.369+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
-2024-12-04T00:35:59.370+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}
-2024-12-04T00:35:59.370+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
-2024-12-04T00:35:59.371+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2024-12-04T00:35:59.372+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed Dec 04 00:35:59 CET 2024, status=400, error=Bad Request, trace=org.springframework.ht (truncated)...]
-2024-12-04T00:35:59.375+01:00 DEBUG 18012 --- [SafetyNet Alerts] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 400
-2024-12-04T00:42:54.559+01:00  INFO 18012 --- [SafetyNet Alerts] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 43 class path changes (0 additions, 42 deletions, 1 modification)
-2024-12-04T00:42:54.690+01:00  INFO 18012 --- [SafetyNet Alerts] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T00:42:54.720+01:00  WARN 18012 --- [SafetyNet Alerts] [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-12-04T00:42:54.723+01:00  INFO 18012 --- [SafetyNet Alerts] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-12-04T00:42:54.808+01:00  INFO 18012 --- [SafetyNet Alerts] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-12-04T00:42:55.627+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 22.0.1 with PID 18012 (C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts\target\classes started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
-2024-12-04T00:42:55.627+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Running with Spring Boot v3.3.5, Spring v6.1.14
-2024-12-04T00:42:55.627+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-12-04T00:42:57.772+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-04T00:42:57.776+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
-2024-12-04T00:42:59.267+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-12-04T00:42:59.270+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-04T00:42:59.270+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2024-12-04T00:42:59.529+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-04T00:42:59.530+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3896 ms
-2024-12-04T00:42:59.696+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2024-12-04T00:42:59.706+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:7e725bb4-6121-405b-87f6-ced292826819 user=SA
-2024-12-04T00:42:59.707+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2024-12-04T00:42:59.707+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:7e725bb4-6121-405b-87f6-ced292826819'
-2024-12-04T00:42:59.808+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2024-12-04T00:42:59.926+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-04T00:42:59.933+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-12-04T00:43:00.046+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-04T00:43:00.192+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-12-04T00:43:00.192+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T00:43:00.339+01:00  WARN 18012 --- [SafetyNet Alerts] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-04T00:43:00.524+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
-2024-12-04T00:43:00.726+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2024-12-04T00:43:00.781+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-12-04T00:43:00.801+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-12-04T00:43:02.245+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-04T00:43:02.263+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-12-04T00:43:02.468+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-12-04T00:43:02.589+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 7.384 seconds (process running for 692.232)
-2024-12-04T00:43:02.597+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-12-04T00:43:04.914+01:00  INFO 18012 --- [SafetyNet Alerts] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 42 class path changes (42 additions, 0 deletions, 0 modifications)
-2024-12-04T00:43:04.965+01:00  INFO 18012 --- [SafetyNet Alerts] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T00:43:04.966+01:00  WARN 18012 --- [SafetyNet Alerts] [Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-12-04T00:43:04.970+01:00  INFO 18012 --- [SafetyNet Alerts] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2024-12-04T00:43:04.990+01:00  INFO 18012 --- [SafetyNet Alerts] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2024-12-04T00:43:05.124+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 22.0.1 with PID 18012 (C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts\target\classes started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
-2024-12-04T00:43:05.125+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Running with Spring Boot v3.3.5, Spring v6.1.14
-2024-12-04T00:43:05.125+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-12-04T00:43:06.015+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-04T00:43:06.028+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
-2024-12-04T00:43:06.601+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-12-04T00:43:06.603+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-04T00:43:06.604+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2024-12-04T00:43:06.937+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-04T00:43:06.938+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1809 ms
-2024-12-04T00:43:07.094+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2024-12-04T00:43:07.102+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:dd3045c7-1c5e-4863-8a39-79b9a88bb892 user=SA
-2024-12-04T00:43:07.102+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2024-12-04T00:43:07.102+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dd3045c7-1c5e-4863-8a39-79b9a88bb892'
-2024-12-04T00:43:07.221+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2024-12-04T00:43:07.348+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-04T00:43:07.354+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-12-04T00:43:07.393+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-04T00:43:07.459+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-12-04T00:43:07.459+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T00:43:07.605+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chargement des données JSON au démarrage de l'application...
-2024-12-04T00:43:07.605+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
-2024-12-04T00:43:07.605+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
-2024-12-04T00:43:07.622+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Données JSON chargées avec succès !
-2024-12-04T00:43:07.932+01:00  WARN 18012 --- [SafetyNet Alerts] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-04T00:43:08.101+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
-2024-12-04T00:43:08.226+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2024-12-04T00:43:08.350+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-12-04T00:43:08.428+01:00 DEBUG 18012 --- [SafetyNet Alerts] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-12-04T00:43:09.087+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-04T00:43:09.100+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-12-04T00:43:09.160+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-12-04T00:43:09.172+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 4.099 seconds (process running for 698.814)
-2024-12-04T00:43:09.176+01:00  INFO 18012 --- [SafetyNet Alerts] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-12-04T00:43:13.347+01:00  INFO 9576 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Starting SafetyNetAlertsApplicationTests using Java 17.0.12 with PID 9576 (started by hacha in C:\wamp64\www\openclassrooms\P5-Cr�ez votre premi�re application web avec Spring Boot\SafetyNetAlerts)
-2024-12-04T00:43:13.350+01:00 DEBUG 9576 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Running with Spring Boot v3.3.5, Spring v6.1.14
-2024-12-04T00:43:13.353+01:00  INFO 9576 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2024-12-04T00:43:13.523+01:00 DEBUG 9576 --- [SafetyNet Alerts] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@738a5848
-2024-12-04T00:43:16.688+01:00  INFO 9576 --- [SafetyNet Alerts] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-04T00:43:16.754+01:00  INFO 9576 --- [SafetyNet Alerts] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 0 JPA repository interfaces.
-2024-12-04T00:43:18.458+01:00  INFO 9576 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-12-04T00:43:19.324+01:00  INFO 9576 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:af2653dd-89d0-4a0f-b2f1-32bd79281e98 user=SA
-2024-12-04T00:43:19.332+01:00  INFO 9576 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-12-04T00:43:19.517+01:00  INFO 9576 --- [SafetyNet Alerts] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-04T00:43:19.781+01:00  INFO 9576 --- [SafetyNet Alerts] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-12-04T00:43:19.934+01:00  INFO 9576 --- [SafetyNet Alerts] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-12-04T00:43:21.029+01:00  INFO 9576 --- [SafetyNet Alerts] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-04T00:43:22.377+01:00  INFO 9576 --- [SafetyNet Alerts] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-12-04T00:43:22.391+01:00  INFO 9576 --- [SafetyNet Alerts] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T00:43:22.670+01:00  INFO 9576 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement des donn�es JSON au d�marrage de l'application...
-2024-12-04T00:43:22.671+01:00  INFO 9576 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
-2024-12-04T00:43:22.671+01:00  INFO 9576 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
-2024-12-04T00:43:22.882+01:00  INFO 9576 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Donn�es JSON charg�es avec succ�s !
-2024-12-04T00:43:23.642+01:00  WARN 9576 --- [SafetyNet Alerts] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-04T00:43:23.998+01:00 DEBUG 9576 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
-2024-12-04T00:43:24.178+01:00 DEBUG 9576 --- [SafetyNet Alerts] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2024-12-04T00:43:24.324+01:00 DEBUG 9576 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-12-04T00:43:24.442+01:00 DEBUG 9576 --- [SafetyNet Alerts] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-12-04T00:43:25.543+01:00  INFO 9576 --- [SafetyNet Alerts] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-12-04T00:43:25.721+01:00  INFO 9576 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Started SafetyNetAlertsApplicationTests in 13.344 seconds (process running for 16.518)
-2024-12-04T00:43:27.257+01:00 DEBUG 9576 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@738a5848, started on Wed Dec 04 00:43:13 CET 2024
-2024-12-04T00:43:27.564+01:00  INFO 9576 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T00:43:27.569+01:00  INFO 9576 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-12-04T00:43:27.575+01:00  INFO 9576 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-12-04T00:44:02.555+01:00  INFO 18012 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T00:44:02.558+01:00  WARN 18012 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-12-04T00:44:02.559+01:00  INFO 18012 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2024-12-04T00:44:02.560+01:00  INFO 18012 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2024-12-04T00:44:09.417+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 22.0.1 with PID 17148 (C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts\target\classes started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
-2024-12-04T00:44:09.421+01:00 DEBUG 17148 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Running with Spring Boot v3.3.5, Spring v6.1.14
-2024-12-04T00:44:09.423+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-12-04T00:44:09.524+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-12-04T00:44:09.525+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-12-04T00:44:11.897+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-04T00:44:11.944+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 JPA repository interfaces.
-2024-12-04T00:44:13.501+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-12-04T00:44:13.529+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-04T00:44:13.530+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2024-12-04T00:44:13.666+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-04T00:44:13.667+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4140 ms
-2024-12-04T00:44:13.973+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-12-04T00:44:14.363+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:fa38478b-f889-4013-8754-992b4af0203e user=SA
-2024-12-04T00:44:14.366+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-12-04T00:44:14.384+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:fa38478b-f889-4013-8754-992b4af0203e'
-2024-12-04T00:44:14.582+01:00 DEBUG 17148 --- [SafetyNet Alerts] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2024-12-04T00:44:14.842+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-04T00:44:14.955+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-12-04T00:44:15.029+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-12-04T00:44:15.667+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-04T00:44:16.414+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-12-04T00:44:16.426+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T00:44:16.705+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chargement des données JSON au démarrage de l'application...
-2024-12-04T00:44:16.706+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
-2024-12-04T00:44:16.706+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
-2024-12-04T00:44:16.824+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Données JSON chargées avec succès !
-2024-12-04T00:44:17.147+01:00  WARN 17148 --- [SafetyNet Alerts] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-04T00:44:17.459+01:00 DEBUG 17148 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
-2024-12-04T00:44:17.575+01:00 DEBUG 17148 --- [SafetyNet Alerts] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2024-12-04T00:44:17.678+01:00 DEBUG 17148 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-12-04T00:44:17.763+01:00 DEBUG 17148 --- [SafetyNet Alerts] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-12-04T00:44:18.644+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-04T00:44:18.673+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-12-04T00:44:18.831+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-12-04T00:44:18.872+01:00  INFO 17148 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 10.472 seconds (process running for 11.443)
-2024-12-04T00:44:40.973+01:00  INFO 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-12-04T00:44:40.974+01:00  INFO 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-12-04T00:44:40.974+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2024-12-04T00:44:40.975+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2024-12-04T00:44:40.975+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2024-12-04T00:44:40.977+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7d01a016
-2024-12-04T00:44:40.978+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@585da060
-2024-12-04T00:44:40.978+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2024-12-04T00:44:40.978+01:00  INFO 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2024-12-04T00:44:41.014+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/medicalRecordCRUD", parameters={}
-2024-12-04T00:44:41.025+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#addMedicalRecord(MedicalRecordCRUD)
-2024-12-04T00:44:41.133+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to []
-2024-12-04T00:44:41.140+01:00  WARN 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.safetynet.alerts.model.MedicalRecordCRUD> com.safetynet.alerts.controller.MedicalRecordControllerCRUD.addMedicalRecord(com.safetynet.alerts.model.MedicalRecordCRUD)]
-2024-12-04T00:44:41.145+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
-2024-12-04T00:44:41.161+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}
-2024-12-04T00:44:41.167+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
-2024-12-04T00:44:41.210+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2024-12-04T00:44:41.220+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed Dec 04 00:44:41 CET 2024, status=400, error=Bad Request, trace=org.springframework.ht (truncated)...]
-2024-12-04T00:44:41.293+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 400
-2024-12-04T00:47:18.441+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/medicalRecordCRUD", parameters={}
-2024-12-04T00:47:18.442+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#addMedicalRecord(MedicalRecordCRUD)
-2024-12-04T00:47:18.450+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecordCRUD@2cdba4d3]
-2024-12-04T00:47:18.482+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2024-12-04T00:47:18.483+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.safetynet.alerts.model.MedicalRecordCRUD@2cdba4d3]
-2024-12-04T00:47:18.485+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2024-12-04T00:47:30.331+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : PUT "/medicalRecordCRUD", parameters={}
-2024-12-04T00:47:30.335+01:00  WARN 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
-2024-12-04T00:47:30.335+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 405 METHOD_NOT_ALLOWED
-2024-12-04T00:47:30.336+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for PUT "/error", parameters={}
-2024-12-04T00:47:30.337+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
-2024-12-04T00:47:30.340+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2024-12-04T00:47:30.341+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed Dec 04 00:47:30 CET 2024, status=405, error=Method Not Allowed, trace=org.springframe (truncated)...]
-2024-12-04T00:47:30.344+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 405
-2024-12-04T00:48:27.697+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/medicalRecordCRUD/John/Boyd", parameters={}
-2024-12-04T00:48:27.699+01:00  WARN 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
-2024-12-04T00:48:27.700+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 405 METHOD_NOT_ALLOWED
-2024-12-04T00:48:27.701+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
-2024-12-04T00:48:27.702+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
-2024-12-04T00:48:27.704+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2024-12-04T00:48:27.704+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed Dec 04 00:48:27 CET 2024, status=405, error=Method Not Allowed, trace=org.springframe (truncated)...]
-2024-12-04T00:48:27.706+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 405
-2024-12-04T00:48:44.597+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/medicalRecordCRUD", parameters={}
-2024-12-04T00:48:44.597+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#addMedicalRecord(MedicalRecordCRUD)
-2024-12-04T00:48:44.600+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecordCRUD@4af56c21]
-2024-12-04T00:48:44.601+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2024-12-04T00:48:44.601+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.safetynet.alerts.model.MedicalRecordCRUD@4af56c21]
-2024-12-04T00:48:44.604+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2024-12-04T00:49:06.854+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/medicalRecordCRUD/John/Boyd", parameters={}
-2024-12-04T00:49:06.857+01:00  WARN 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
-2024-12-04T00:49:06.857+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 405 METHOD_NOT_ALLOWED
-2024-12-04T00:49:06.858+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
-2024-12-04T00:49:06.859+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
-2024-12-04T00:49:06.861+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2024-12-04T00:49:06.861+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed Dec 04 00:49:06 CET 2024, status=405, error=Method Not Allowed, trace=org.springframe (truncated)...]
-2024-12-04T00:49:06.863+01:00 DEBUG 17148 --- [SafetyNet Alerts] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 405
-2024-12-04T01:11:45.559+01:00  INFO 17148 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T01:11:45.578+01:00  WARN 17148 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-12-04T01:11:45.581+01:00  INFO 17148 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-12-04T01:11:45.587+01:00  INFO 17148 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-12-04T01:12:08.735+01:00  INFO 12436 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Starting SafetyNetAlertsApplicationTests using Java 17.0.12 with PID 12436 (started by hacha in C:\wamp64\www\openclassrooms\P5-Cr�ez votre premi�re application web avec Spring Boot\SafetyNetAlerts)
-2024-12-04T01:12:08.739+01:00 DEBUG 12436 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Running with Spring Boot v3.3.5, Spring v6.1.14
-2024-12-04T01:12:08.741+01:00  INFO 12436 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2024-12-04T01:12:08.875+01:00 DEBUG 12436 --- [SafetyNet Alerts] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@738a5848
-2024-12-04T01:12:12.016+01:00  INFO 12436 --- [SafetyNet Alerts] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-04T01:12:12.080+01:00  INFO 12436 --- [SafetyNet Alerts] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 0 JPA repository interfaces.
-2024-12-04T01:12:13.787+01:00  INFO 12436 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-12-04T01:12:14.540+01:00  INFO 12436 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:10968ae7-e6c1-4ff9-a1a1-3d0cd47f03ae user=SA
-2024-12-04T01:12:14.548+01:00  INFO 12436 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-12-04T01:12:14.679+01:00  INFO 12436 --- [SafetyNet Alerts] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-04T01:12:14.900+01:00  INFO 12436 --- [SafetyNet Alerts] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-12-04T01:12:15.030+01:00  INFO 12436 --- [SafetyNet Alerts] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-12-04T01:12:15.950+01:00  INFO 12436 --- [SafetyNet Alerts] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-04T01:12:17.229+01:00  INFO 12436 --- [SafetyNet Alerts] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-12-04T01:12:17.247+01:00  INFO 12436 --- [SafetyNet Alerts] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T01:12:17.531+01:00  INFO 12436 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement des donn�es JSON au d�marrage de l'application...
-2024-12-04T01:12:17.531+01:00  INFO 12436 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
-2024-12-04T01:12:17.532+01:00  INFO 12436 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
-2024-12-04T01:12:17.709+01:00  INFO 12436 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Donn�es JSON charg�es avec succ�s !
-2024-12-04T01:12:18.424+01:00  WARN 12436 --- [SafetyNet Alerts] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-04T01:12:18.840+01:00 DEBUG 12436 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
-2024-12-04T01:12:19.041+01:00 DEBUG 12436 --- [SafetyNet Alerts] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2024-12-04T01:12:19.168+01:00 DEBUG 12436 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-12-04T01:12:19.311+01:00 DEBUG 12436 --- [SafetyNet Alerts] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-12-04T01:12:20.447+01:00  INFO 12436 --- [SafetyNet Alerts] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-12-04T01:12:20.630+01:00  INFO 12436 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Started SafetyNetAlertsApplicationTests in 12.913 seconds (process running for 16.075)
-2024-12-04T01:12:22.062+01:00 DEBUG 12436 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@738a5848, started on Wed Dec 04 01:12:08 CET 2024
-2024-12-04T01:12:22.344+01:00  INFO 12436 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T01:12:22.348+01:00  INFO 12436 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-12-04T01:12:22.356+01:00  INFO 12436 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-12-04T01:14:07.815+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 22.0.1 with PID 16404 (C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts\target\classes started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
-2024-12-04T01:14:07.819+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Running with Spring Boot v3.3.5, Spring v6.1.14
-2024-12-04T01:14:07.821+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-12-04T01:14:07.925+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-12-04T01:14:07.926+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-12-04T01:14:10.212+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-04T01:14:10.254+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 0 JPA repository interfaces.
-2024-12-04T01:14:11.845+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-12-04T01:14:11.873+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-04T01:14:11.874+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2024-12-04T01:14:12.027+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-04T01:14:12.028+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4101 ms
-2024-12-04T01:14:12.331+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-12-04T01:14:12.679+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:6d322e10-090b-4c24-888a-44b55c3faa78 user=SA
-2024-12-04T01:14:12.681+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-12-04T01:14:12.697+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:6d322e10-090b-4c24-888a-44b55c3faa78'
-2024-12-04T01:14:12.888+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2024-12-04T01:14:13.152+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-04T01:14:13.262+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-12-04T01:14:13.339+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-12-04T01:14:13.967+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-04T01:14:14.692+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-12-04T01:14:14.702+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T01:14:14.907+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chargement des données JSON au démarrage de l'application...
-2024-12-04T01:14:14.908+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
-2024-12-04T01:14:14.909+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
-2024-12-04T01:14:15.040+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Données JSON chargées avec succès !
-2024-12-04T01:14:15.357+01:00  WARN 16404 --- [SafetyNet Alerts] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-04T01:14:15.719+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
-2024-12-04T01:14:15.825+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2024-12-04T01:14:15.912+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-12-04T01:14:16.020+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-12-04T01:14:16.821+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-04T01:14:16.846+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-12-04T01:14:17.004+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-12-04T01:14:17.038+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 10.268 seconds (process running for 11.236)
-2024-12-04T01:14:47.638+01:00  INFO 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-12-04T01:14:47.639+01:00  INFO 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-12-04T01:14:47.641+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2024-12-04T01:14:47.643+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2024-12-04T01:14:47.643+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2024-12-04T01:14:47.648+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7676c0d
-2024-12-04T01:14:47.650+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@65c865b4
-2024-12-04T01:14:47.651+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2024-12-04T01:14:47.652+01:00  INFO 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
-2024-12-04T01:14:47.720+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/medicalRecordCRUD", parameters={}
-2024-12-04T01:14:47.740+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#addMedicalRecord(MedicalRecordCRUD)
-2024-12-04T01:14:47.998+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecordCRUD@7f377a60]
-2024-12-04T01:14:48.071+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2024-12-04T01:14:48.076+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.safetynet.alerts.model.MedicalRecordCRUD@7f377a60]
-2024-12-04T01:14:48.110+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2024-12-04T01:14:54.518+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/medicalRecordCRUD/John/Boyd", parameters={}
-2024-12-04T01:14:54.523+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#getMedicalRecordByFullName(String, String)
-2024-12-04T01:14:54.550+01:00  INFO 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-3] c.s.a.c.MedicalRecordControllerCRUD      : Received GET request for firstName: John, lastName: Boyd
-2024-12-04T01:14:54.554+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2024-12-04T01:14:54.555+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.safetynet.alerts.model.MedicalRecordCRUD@7f377a60]
-2024-12-04T01:14:54.557+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2024-12-04T01:16:55.572+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/medicalRecordCRUD/John/Boyd", parameters={}
-2024-12-04T01:16:55.575+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#getMedicalRecordByFullName(String, String)
-2024-12-04T01:16:55.577+01:00  INFO 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-6] c.s.a.c.MedicalRecordControllerCRUD      : Received GET request for firstName: John, lastName: Boyd
-2024-12-04T01:16:55.579+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2024-12-04T01:16:55.581+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.safetynet.alerts.model.MedicalRecordCRUD@7f377a60]
-2024-12-04T01:16:55.585+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2024-12-04T01:17:29.762+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : PUT "/medicalRecordCRUD/John/Boyd", parameters={}
-2024-12-04T01:17:29.766+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#updateMedicalRecord(String, String, MedicalRecordCRUD)
-2024-12-04T01:17:29.776+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
-2024-12-04T01:17:29.792+01:00  WARN 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.Void> com.safetynet.alerts.controller.MedicalRecordControllerCRUD.updateMedicalRecord(java.lang.String,java.lang.String,com.safetynet.alerts.model.MedicalRecordCRUD)]
-2024-12-04T01:17:29.795+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
-2024-12-04T01:17:29.828+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for PUT "/error", parameters={}
-2024-12-04T01:17:29.832+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
-2024-12-04T01:17:29.852+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2024-12-04T01:17:29.853+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed Dec 04 01:17:29 CET 2024, status=400, error=Bad Request, trace=org.springframework.ht (truncated)...]
-2024-12-04T01:17:29.891+01:00 DEBUG 16404 --- [SafetyNet Alerts] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 400
-2024-12-04T01:22:43.789+01:00  INFO 16404 --- [SafetyNet Alerts] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 43 class path changes (0 additions, 42 deletions, 1 modification)
-2024-12-04T01:22:43.838+01:00  INFO 16404 --- [SafetyNet Alerts] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T01:22:43.860+01:00  WARN 16404 --- [SafetyNet Alerts] [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-12-04T01:22:43.864+01:00  INFO 16404 --- [SafetyNet Alerts] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-12-04T01:22:43.892+01:00  INFO 16404 --- [SafetyNet Alerts] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-12-04T01:22:44.396+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 22.0.1 with PID 16404 (C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts\target\classes started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
-2024-12-04T01:22:44.397+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Running with Spring Boot v3.3.5, Spring v6.1.14
-2024-12-04T01:22:44.397+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-12-04T01:22:47.066+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-04T01:22:47.070+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
-2024-12-04T01:22:47.900+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-12-04T01:22:47.903+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-04T01:22:47.904+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2024-12-04T01:22:48.006+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-04T01:22:48.007+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3602 ms
-2024-12-04T01:22:48.208+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2024-12-04T01:22:48.212+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:c01f92d6-e60b-4d4a-82f6-a66854c14bf5 user=SA
-2024-12-04T01:22:48.213+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2024-12-04T01:22:48.213+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:c01f92d6-e60b-4d4a-82f6-a66854c14bf5'
-2024-12-04T01:22:48.322+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2024-12-04T01:22:48.425+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-04T01:22:48.430+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-12-04T01:22:48.485+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-04T01:22:48.541+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-12-04T01:22:48.542+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T01:22:49.008+01:00  WARN 16404 --- [SafetyNet Alerts] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-04T01:22:50.315+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
-2024-12-04T01:22:50.533+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2024-12-04T01:22:50.618+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-12-04T01:22:50.699+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-12-04T01:22:51.414+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-04T01:22:51.426+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-12-04T01:22:51.558+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-12-04T01:22:51.583+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 7.445 seconds (process running for 525.781)
-2024-12-04T01:22:51.593+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-12-04T01:22:53.025+01:00  INFO 16404 --- [SafetyNet Alerts] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 42 class path changes (42 additions, 0 deletions, 0 modifications)
-2024-12-04T01:22:53.037+01:00  INFO 16404 --- [SafetyNet Alerts] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T01:22:53.039+01:00  WARN 16404 --- [SafetyNet Alerts] [Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-12-04T01:22:53.043+01:00  INFO 16404 --- [SafetyNet Alerts] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2024-12-04T01:22:53.051+01:00  INFO 16404 --- [SafetyNet Alerts] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2024-12-04T01:22:53.524+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 22.0.1 with PID 16404 (C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts\target\classes started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
-2024-12-04T01:22:53.525+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Running with Spring Boot v3.3.5, Spring v6.1.14
-2024-12-04T01:22:53.525+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-12-04T01:22:54.413+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-04T01:22:54.421+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
-2024-12-04T01:22:54.939+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-12-04T01:22:54.942+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-04T01:22:54.942+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2024-12-04T01:22:55.012+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-04T01:22:55.013+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1480 ms
-2024-12-04T01:22:55.280+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2024-12-04T01:22:55.320+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:dad37462-0c33-4482-b52a-d7fa5cf232ca user=SA
-2024-12-04T01:22:55.322+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2024-12-04T01:22:55.323+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dad37462-0c33-4482-b52a-d7fa5cf232ca'
-2024-12-04T01:22:55.397+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2024-12-04T01:22:55.554+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-04T01:22:55.563+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-12-04T01:22:55.601+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-04T01:22:55.693+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-12-04T01:22:55.694+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T01:22:55.958+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chargement des données JSON au démarrage de l'application...
-2024-12-04T01:22:55.959+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
-2024-12-04T01:22:55.959+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
-2024-12-04T01:22:56.008+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Données JSON chargées avec succès !
-2024-12-04T01:22:56.479+01:00  WARN 16404 --- [SafetyNet Alerts] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-04T01:22:56.643+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
-2024-12-04T01:22:56.849+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2024-12-04T01:22:56.943+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-12-04T01:22:56.981+01:00 DEBUG 16404 --- [SafetyNet Alerts] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-12-04T01:22:57.568+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-12-04T01:22:57.582+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-12-04T01:22:57.646+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-12-04T01:22:57.675+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 4.523 seconds (process running for 531.873)
-2024-12-04T01:22:57.679+01:00  INFO 16404 --- [SafetyNet Alerts] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-12-04T01:23:02.045+01:00  INFO 8592 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Starting SafetyNetAlertsApplicationTests using Java 17.0.12 with PID 8592 (started by hacha in C:\wamp64\www\openclassrooms\P5-Cr�ez votre premi�re application web avec Spring Boot\SafetyNetAlerts)
-2024-12-04T01:23:02.049+01:00 DEBUG 8592 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Running with Spring Boot v3.3.5, Spring v6.1.14
-2024-12-04T01:23:02.050+01:00  INFO 8592 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2024-12-04T01:23:02.205+01:00 DEBUG 8592 --- [SafetyNet Alerts] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@738a5848
-2024-12-04T01:23:05.790+01:00  INFO 8592 --- [SafetyNet Alerts] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-04T01:23:05.869+01:00  INFO 8592 --- [SafetyNet Alerts] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 0 JPA repository interfaces.
-2024-12-04T01:23:07.839+01:00  INFO 8592 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-12-04T01:23:08.776+01:00  INFO 8592 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:b619b11d-6d22-4f9f-991d-f6eec574de8b user=SA
-2024-12-04T01:23:08.782+01:00  INFO 8592 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-12-04T01:23:08.937+01:00  INFO 8592 --- [SafetyNet Alerts] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-04T01:23:09.151+01:00  INFO 8592 --- [SafetyNet Alerts] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-12-04T01:23:09.280+01:00  INFO 8592 --- [SafetyNet Alerts] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-12-04T01:23:10.294+01:00  INFO 8592 --- [SafetyNet Alerts] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-04T01:23:11.734+01:00  INFO 8592 --- [SafetyNet Alerts] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-12-04T01:23:11.748+01:00  INFO 8592 --- [SafetyNet Alerts] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T01:23:12.037+01:00  INFO 8592 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement des donn�es JSON au d�marrage de l'application...
-2024-12-04T01:23:12.038+01:00  INFO 8592 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
-2024-12-04T01:23:12.038+01:00  INFO 8592 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
-2024-12-04T01:23:12.262+01:00  INFO 8592 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Donn�es JSON charg�es avec succ�s !
-2024-12-04T01:23:12.997+01:00  WARN 8592 --- [SafetyNet Alerts] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-04T01:23:13.393+01:00 DEBUG 8592 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
-2024-12-04T01:23:13.591+01:00 DEBUG 8592 --- [SafetyNet Alerts] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2024-12-04T01:23:13.715+01:00 DEBUG 8592 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-12-04T01:23:13.862+01:00 DEBUG 8592 --- [SafetyNet Alerts] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-12-04T01:23:15.089+01:00  INFO 8592 --- [SafetyNet Alerts] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-12-04T01:23:15.314+01:00  INFO 8592 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Started SafetyNetAlertsApplicationTests in 14.364 seconds (process running for 17.774)
-2024-12-04T01:23:17.126+01:00 DEBUG 8592 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@738a5848, started on Wed Dec 04 01:23:02 CET 2024
-2024-12-04T01:23:17.449+01:00  INFO 8592 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T01:23:17.453+01:00  INFO 8592 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-12-04T01:23:17.459+01:00  INFO 8592 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-12-04T01:25:04.869+01:00  INFO 16404 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-12-04T01:25:04.871+01:00  WARN 16404 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-12-04T01:25:04.872+01:00  INFO 16404 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2024-12-04T01:25:04.875+01:00  INFO 16404 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-12-05T00:31:54.993+01:00  INFO 4780 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Starting SafetyNetAlertsApplicationTests using Java 17.0.12 with PID 4780 (started by hacha in C:\wamp64\www\openclassrooms\P5-Cr�ez votre premi�re application web avec Spring Boot\SafetyNetAlerts)
+2024-12-05T00:31:55.024+01:00 DEBUG 4780 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Running with Spring Boot v3.3.5, Spring v6.1.14
+2024-12-05T00:31:55.025+01:00  INFO 4780 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T00:31:55.194+01:00 DEBUG 4780 --- [SafetyNet Alerts] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@738a5848
+2024-12-05T00:31:58.525+01:00  INFO 4780 --- [SafetyNet Alerts] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T00:31:58.597+01:00  INFO 4780 --- [SafetyNet Alerts] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 0 JPA repository interfaces.
+2024-12-05T00:32:00.562+01:00  INFO 4780 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T00:32:01.500+01:00  INFO 4780 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:283cb8cb-48fe-474b-83a7-c7d8843c162d user=SA
+2024-12-05T00:32:01.505+01:00  INFO 4780 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T00:32:01.667+01:00  INFO 4780 --- [SafetyNet Alerts] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-05T00:32:01.939+01:00  INFO 4780 --- [SafetyNet Alerts] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-05T00:32:02.088+01:00  INFO 4780 --- [SafetyNet Alerts] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-05T00:32:03.208+01:00  INFO 4780 --- [SafetyNet Alerts] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-05T00:32:04.566+01:00  INFO 4780 --- [SafetyNet Alerts] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-05T00:32:04.579+01:00  INFO 4780 --- [SafetyNet Alerts] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05T00:32:04.873+01:00  INFO 4780 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement des donn�es JSON au d�marrage de l'application...
+2024-12-05T00:32:04.874+01:00  INFO 4780 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
+2024-12-05T00:32:04.874+01:00  INFO 4780 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
+2024-12-05T00:32:05.058+01:00  INFO 4780 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Donn�es JSON charg�es avec succ�s !
+2024-12-05T00:32:05.834+01:00  WARN 4780 --- [SafetyNet Alerts] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-05T00:32:06.195+01:00 DEBUG 4780 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
+2024-12-05T00:32:06.427+01:00 DEBUG 4780 --- [SafetyNet Alerts] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-05T00:32:06.583+01:00 DEBUG 4780 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-05T00:32:06.722+01:00 DEBUG 4780 --- [SafetyNet Alerts] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-05T00:32:07.866+01:00  INFO 4780 --- [SafetyNet Alerts] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-05T00:32:08.065+01:00  INFO 4780 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Started SafetyNetAlertsApplicationTests in 14.178 seconds (process running for 17.675)
+2024-12-05T00:32:09.490+01:00 DEBUG 4780 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@738a5848, started on Thu Dec 05 00:31:55 CET 2024
+2024-12-05T00:32:09.847+01:00  INFO 4780 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05T00:32:09.854+01:00  INFO 4780 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T00:32:09.867+01:00  INFO 4780 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T00:32:37.794+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Starting SafetyNetAlertsApplication using Java 22.0.1 with PID 10500 (C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts\target\classes started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
+2024-12-05T00:32:37.799+01:00 DEBUG 10500 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Running with Spring Boot v3.3.5, Spring v6.1.14
+2024-12-05T00:32:37.801+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T00:32:37.951+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-05T00:32:37.952+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-05T00:32:40.832+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T00:32:40.884+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 0 JPA repository interfaces.
+2024-12-05T00:32:43.110+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-05T00:32:43.135+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T00:32:43.135+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-12-05T00:32:43.297+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T00:32:43.298+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5344 ms
+2024-12-05T00:32:43.789+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T00:32:44.218+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:4478b6c8-c4e2-4082-95aa-c31a2c148f45 user=SA
+2024-12-05T00:32:44.221+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T00:32:44.240+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:4478b6c8-c4e2-4082-95aa-c31a2c148f45'
+2024-12-05T00:32:44.468+01:00 DEBUG 10500 --- [SafetyNet Alerts] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-12-05T00:32:44.730+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-05T00:32:44.852+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-05T00:32:44.926+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-05T00:32:45.666+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-05T00:32:46.370+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-05T00:32:46.378+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05T00:32:46.696+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chargement des données JSON au démarrage de l'application...
+2024-12-05T00:32:46.697+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
+2024-12-05T00:32:46.698+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
+2024-12-05T00:32:46.816+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] c.safetynet.alerts.service.DataService   : Données JSON chargées avec succès !
+2024-12-05T00:32:47.179+01:00  WARN 10500 --- [SafetyNet Alerts] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-05T00:32:47.472+01:00 DEBUG 10500 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
+2024-12-05T00:32:47.580+01:00 DEBUG 10500 --- [SafetyNet Alerts] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-05T00:32:47.714+01:00 DEBUG 10500 --- [SafetyNet Alerts] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-05T00:32:47.792+01:00 DEBUG 10500 --- [SafetyNet Alerts] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-05T00:32:48.744+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-05T00:32:48.768+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-05T00:32:48.931+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-05T00:32:48.992+01:00  INFO 10500 --- [SafetyNet Alerts] [restartedMain] c.s.alerts.SafetyNetAlertsApplication    : Started SafetyNetAlertsApplication in 12.304 seconds (process running for 13.381)
+2024-12-05T00:33:01.375+01:00  INFO 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-05T00:33:01.376+01:00  INFO 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-05T00:33:01.377+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-12-05T00:33:01.377+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-12-05T00:33:01.378+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-12-05T00:33:01.381+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5416dbd1
+2024-12-05T00:33:01.382+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@19703c1d
+2024-12-05T00:33:01.382+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-05T00:33:01.385+01:00  INFO 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2024-12-05T00:33:01.452+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/medicalRecordCRUD/Tessa/Carman", parameters={}
+2024-12-05T00:33:01.465+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#getMedicalRecordByFullName(String, String)
+2024-12-05T00:33:01.659+01:00  INFO 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-1] c.s.a.c.MedicalRecordControllerCRUD      : Received GET request for firstName: Tessa, lastName: Carman
+2024-12-05T00:33:01.659+01:00  INFO 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-1] c.s.a.service.MedicalRecordServiceCRUD   : Recherche du dossier médical pour : Tessa Carman
+2024-12-05T00:33:01.668+01:00  WARN 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-1] c.s.a.c.MedicalRecordControllerCRUD      : Dossier médical non trouvé pour : Tessa Carman
+2024-12-05T00:33:01.738+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-05T00:33:01.739+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2024-12-05T00:33:01.746+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-12-05T00:33:09.556+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/medicalRecordCRUD", parameters={}
+2024-12-05T00:33:09.558+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#addMedicalRecord(MedicalRecordCRUD)
+2024-12-05T00:33:09.585+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecordCRUD@7130e6da]
+2024-12-05T00:33:09.591+01:00  INFO 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-3] c.s.a.service.MedicalRecordServiceCRUD   : Ajout du dossier médical : com.safetynet.alerts.model.MedicalRecordCRUD@7130e6da
+2024-12-05T00:33:09.592+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-05T00:33:09.593+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.safetynet.alerts.model.MedicalRecordCRUD@7130e6da]
+2024-12-05T00:33:09.616+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-12-05T00:33:14.705+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/medicalRecordCRUD/Tessa/Carman", parameters={}
+2024-12-05T00:33:14.707+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#getMedicalRecordByFullName(String, String)
+2024-12-05T00:33:14.708+01:00  INFO 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-4] c.s.a.c.MedicalRecordControllerCRUD      : Received GET request for firstName: Tessa, lastName: Carman
+2024-12-05T00:33:14.710+01:00  INFO 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-4] c.s.a.service.MedicalRecordServiceCRUD   : Recherche du dossier médical pour : Tessa Carman
+2024-12-05T00:33:14.711+01:00  INFO 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-4] c.s.a.c.MedicalRecordControllerCRUD      : Dossier médical trouvé pour : Tessa Carman
+2024-12-05T00:33:14.711+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-4] c.s.a.c.MedicalRecordControllerCRUD      : Dossier médical : com.safetynet.alerts.model.MedicalRecordCRUD@7130e6da
+2024-12-05T00:33:14.712+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-05T00:33:14.712+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.safetynet.alerts.model.MedicalRecordCRUD@7130e6da]
+2024-12-05T00:33:14.715+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-12-05T00:33:27.087+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : DELETE "/medicalRecordCRUD/Tessa/Carman", parameters={}
+2024-12-05T00:33:27.092+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#deleteMedicalRecord(String, String)
+2024-12-05T00:33:27.096+01:00  INFO 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-5] c.s.a.service.MedicalRecordServiceCRUD   : Suppression du dossier médical pour : Tessa Carman
+2024-12-05T00:33:27.102+01:00  INFO 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-5] c.s.a.c.MedicalRecordControllerCRUD      : Dossier médical supprimé avec succès pour : Tessa Carman
+2024-12-05T00:33:27.106+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-05T00:33:27.107+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2024-12-05T00:33:27.108+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 204 NO_CONTENT
+2024-12-05T00:33:34.462+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/medicalRecordCRUD/Tessa/Carman", parameters={}
+2024-12-05T00:33:34.464+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#getMedicalRecordByFullName(String, String)
+2024-12-05T00:33:34.466+01:00  INFO 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-6] c.s.a.c.MedicalRecordControllerCRUD      : Received GET request for firstName: Tessa, lastName: Carman
+2024-12-05T00:33:34.466+01:00  INFO 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-6] c.s.a.service.MedicalRecordServiceCRUD   : Recherche du dossier médical pour : Tessa Carman
+2024-12-05T00:33:34.466+01:00  WARN 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-6] c.s.a.c.MedicalRecordControllerCRUD      : Dossier médical non trouvé pour : Tessa Carman
+2024-12-05T00:33:34.467+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-05T00:33:34.467+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2024-12-05T00:33:34.468+01:00 DEBUG 10500 --- [SafetyNet Alerts] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-12-05T01:00:56.658+01:00  INFO 11780 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Starting SafetyNetAlertsApplicationTests using Java 17.0.12 with PID 11780 (started by hacha in C:\wamp64\www\openclassrooms\P5-Cr�ez votre premi�re application web avec Spring Boot\SafetyNetAlerts)
+2024-12-05T01:00:56.661+01:00 DEBUG 11780 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Running with Spring Boot v3.3.5, Spring v6.1.14
+2024-12-05T01:00:56.663+01:00  INFO 11780 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T01:00:56.837+01:00 DEBUG 11780 --- [SafetyNet Alerts] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@738a5848
+2024-12-05T01:01:00.881+01:00  INFO 11780 --- [SafetyNet Alerts] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T01:01:00.972+01:00  INFO 11780 --- [SafetyNet Alerts] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 0 JPA repository interfaces.
+2024-12-05T01:01:03.286+01:00  INFO 11780 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T01:01:04.180+01:00  INFO 11780 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bdfecc7a-be22-4a9a-8029-ca5aac97d83b user=SA
+2024-12-05T01:01:04.186+01:00  INFO 11780 --- [SafetyNet Alerts] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T01:01:04.390+01:00  INFO 11780 --- [SafetyNet Alerts] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-05T01:01:04.700+01:00  INFO 11780 --- [SafetyNet Alerts] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-05T01:01:04.863+01:00  INFO 11780 --- [SafetyNet Alerts] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-05T01:01:06.238+01:00  INFO 11780 --- [SafetyNet Alerts] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-05T01:01:08.000+01:00  INFO 11780 --- [SafetyNet Alerts] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-05T01:01:08.014+01:00  INFO 11780 --- [SafetyNet Alerts] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05T01:01:08.356+01:00  INFO 11780 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement des donn�es JSON au d�marrage de l'application...
+2024-12-05T01:01:08.357+01:00  INFO 11780 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
+2024-12-05T01:01:08.358+01:00  INFO 11780 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
+2024-12-05T01:01:08.608+01:00  INFO 11780 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Donn�es JSON charg�es avec succ�s !
+2024-12-05T01:01:09.681+01:00  WARN 11780 --- [SafetyNet Alerts] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-05T01:01:10.159+01:00 DEBUG 11780 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
+2024-12-05T01:01:10.409+01:00 DEBUG 11780 --- [SafetyNet Alerts] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-05T01:01:10.559+01:00 DEBUG 11780 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-05T01:01:10.710+01:00 DEBUG 11780 --- [SafetyNet Alerts] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-05T01:01:12.127+01:00  INFO 11780 --- [SafetyNet Alerts] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-05T01:01:12.355+01:00  INFO 11780 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Started SafetyNetAlertsApplicationTests in 17.533 seconds (process running for 21.914)
+2024-12-05T01:01:14.041+01:00 DEBUG 11780 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@738a5848, started on Thu Dec 05 01:00:56 CET 2024
+2024-12-05T01:01:14.323+01:00  INFO 11780 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05T01:01:14.331+01:00  INFO 11780 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T01:01:14.340+01:00  INFO 11780 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -6,7 +6,6 @@ public class MedicalRecordCRUD {
     private String firstName;
     private String lastName;
     private String birthdate;
-    private String birthDate;
     private List<String> medications;
     private List<String> allergies;
 
@@ -14,7 +13,6 @@ public class MedicalRecordCRUD {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthdate = birthdate;
-        this.birthDate = birthDate;
         this.medications = medications;
         this.allergies = allergies;
     }
@@ -43,13 +41,6 @@ public class MedicalRecordCRUD {
         this.birthdate = birthdate;
     }
 
-    public String getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(String birthDate) {
-        this.birthDate = birthDate;
-    }
 
     public List<String> getMedications() {
         return medications;

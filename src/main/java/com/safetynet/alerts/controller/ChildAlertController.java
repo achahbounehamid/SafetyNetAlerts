@@ -21,6 +21,9 @@ public class ChildAlertController {
     @GetMapping("/childAlert")
     public ChildAlertResponseDTO getChildAlert(@RequestParam String address) {
         logger.info("Requête reçue pour les enfants habitant à l'adresse : {}", address);
+
+        ChildAlertResponseDTO response = childAlertService.getChildrenAtAddress(address);//raj
+        logger.info("Réponse générée pour l'adresse {} : {}", address, response);//raj log sortie
         return childAlertService.getChildrenAtAddress(address);
     }
 }

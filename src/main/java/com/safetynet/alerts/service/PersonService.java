@@ -18,14 +18,17 @@ public class PersonService {
 
     // Ajouter une nouvelle personne
     public Person addPerson(Person person) {
+        logger.info("Adding a new person: {}", person);
         return personRepository.save(person);
     }
 
     // Mettre à jour une personne existante
     public Person updatePerson(String firstName, String lastName, Person updatedPerson) {
+        logger.info("Attempting to update person: {} {}", firstName, lastName);
         Optional<Person> existingPerson = personRepository.findByFirstNameAndLastName(firstName, lastName);
         if (existingPerson.isPresent()) {
             Person person = existingPerson.get();
+            logger.debug("Existing person found: {}", person);
             person.setAddress(updatedPerson.getAddress());
             person.setCity(updatedPerson.getCity());
             person.setZip(updatedPerson.getZip());
@@ -41,11 +44,13 @@ public class PersonService {
 
     // Supprimer une personne
     public boolean deletePerson(String firstName, String lastName) {
+        logger.info("Attempting to delete person: {} {}", firstName, lastName);
         return personRepository.deleteByFirstNameAndLastName(firstName, lastName);
     }
 
     // Obtenir toutes les personnes
     public List<Person> getAllPersons() {
+        logger.info("Fetching all persons.");
         return personRepository.findAll();
     }
 }

@@ -31,9 +31,12 @@ public class FireStationControllerCRUD {
     public ResponseEntity<Void> updateAddress(
             @PathVariable String address,
             @RequestParam String newAddress) {
+        logger.info("PUT request received to update address: {} to {}", address, newAddress);
         if (fireStationServiceCRUD.updateAddress(address, newAddress)) {
+            logger.info("Address updated successfully: {} -> {}", address, newAddress);
             return ResponseEntity.ok().build();
         }
+        logger.warn("Address not found: {}", address);
         return ResponseEntity.notFound().build();
     }
 

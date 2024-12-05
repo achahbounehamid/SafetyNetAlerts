@@ -12,6 +12,7 @@ public class CommunityEmailService {
     private final DataService dataService;
 
     public CommunityEmailService(DataService dataService) {
+
         this.dataService = dataService;
     }
 

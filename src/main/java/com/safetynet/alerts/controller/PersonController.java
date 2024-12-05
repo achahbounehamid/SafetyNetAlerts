@@ -21,6 +21,7 @@ public class PersonController {
 
     @PostMapping
     public ResponseEntity<Person> addPerson(@RequestBody Person person) {
+        logger.info("Received POST request to add a new person: {}", person);
         return ResponseEntity.ok(personService.addPerson(person));
     }
 
@@ -45,14 +46,18 @@ public class PersonController {
 
     @DeleteMapping("/{firstName}/{lastName}")
     public ResponseEntity<Void> deletePerson(@PathVariable String firstName, @PathVariable String lastName) {
+        logger.info("Received DELETE request to remove person: {} {}", firstName, lastName);
         if (personService.deletePerson(firstName, lastName)) {
+            logger.info("Person deleted successfully: {} {}", firstName, lastName);
             return ResponseEntity.noContent().build();
         }
+        logger.warn("Person not found for deletion: {} {}", firstName, lastName);
         return ResponseEntity.notFound().build();
     }
 
     @GetMapping
     public ResponseEntity<List<Person>> getAllPersons() {
+        logger.info("Received GET request to fetch all persons.");
         return ResponseEntity.ok(personService.getAllPersons());
     }
 }

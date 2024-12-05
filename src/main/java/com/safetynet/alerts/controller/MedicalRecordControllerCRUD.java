@@ -32,16 +32,20 @@ public class MedicalRecordControllerCRUD {
         logger.info("Received PUT request for firstName: {}, lastName: {}", firstName, lastName);
         logger.info("Payload: {}", updatedRecord);
         if (medicalRecordService.updateMedicalRecord(firstName, lastName, updatedRecord)) {
+            logger.info("Mise à jour réussie pour le dossier médical de : {} {}", firstName, lastName);
             return ResponseEntity.ok().build();
         }
+        logger.warn("Dossier médical non trouvé pour : {} {}", firstName, lastName);
         return ResponseEntity.notFound().build();
     }
 
     @DeleteMapping("/{firstName}/{lastName}")
     public ResponseEntity<Void> deleteMedicalRecord(@PathVariable String firstName, @PathVariable String lastName) {
         if (medicalRecordService.deleteMedicalRecord(firstName, lastName)) {
+            logger.info("Dossier médical supprimé avec succès pour : {} {}", firstName, lastName);
             return ResponseEntity.noContent().build();
         }
+        logger.warn("Impossible de trouver le dossier médical pour suppression : {} {}", firstName, lastName);
         return ResponseEntity.notFound().build();
     }
 
@@ -52,8 +56,11 @@ public class MedicalRecordControllerCRUD {
         logger.info("Received GET request for firstName: {}, lastName: {}", firstName, lastName);
         MedicalRecordCRUD medicalRecord = medicalRecordService.getMedicalRecord(firstName, lastName);
         if (medicalRecord != null) {
+            logger.info("Dossier médical trouvé pour : {} {}", firstName, lastName);
+            logger.debug("Dossier médical : {}", medicalRecord);
             return ResponseEntity.ok(medicalRecord);
         }
+        logger.warn("Dossier médical non trouvé pour : {} {}", firstName, lastName);
         return ResponseEntity.notFound().build();
     }
 
