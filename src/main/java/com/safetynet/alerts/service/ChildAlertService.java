@@ -14,7 +14,10 @@ import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
-
+/**
+ * Service permettant de récupérer des informations sur les enfants résidant à une adresse donnée.
+ * Il fournit un DTO contenant la liste des enfants ainsi que celle des autres membres du foyer.
+ */
 @Service
 public class ChildAlertService {
     private static final Logger logger = LoggerFactory.getLogger(ChildAlertService.class);
@@ -23,7 +26,13 @@ public class ChildAlertService {
     public ChildAlertService(DataService dataService) {
         this.dataService = dataService;
     }
-
+    /**
+     * Récupère les informations sur les enfants et les autres personnes habitant à l'adresse spécifiée.
+     *
+     * @param address l'adresse pour laquelle on souhaite obtenir la liste des enfants et des autres membres du foyer
+     * @return un objet {@link ChildAlertResponseDTO} contenant la liste des enfants (avec âge, prénom, nom)
+     *         et la liste des autres membres du foyer (adultes)
+     */
     public ChildAlertResponseDTO getChildrenAtAddress(String address) {
         logger.info("Recherche des enfants pour l'adresse : {}", address);
         // Récupère les données JSON
@@ -57,13 +66,24 @@ public class ChildAlertService {
         return new ChildAlertResponseDTO(children, otherHouseholdMembers);
     }
 
-    // Vérifie si une personne est un enfant
+    /**
+     * Détermine si la personne spécifiée est un enfant (âge ≤ 18 ans).
+     *
+     * @param medicalRecords la liste de tous les dossiers médicaux
+     * @param person la personne dont on veut déterminer l'âge
+     * @return {@code true} si la personne est un enfant, {@code false} sinon
+     */
     private boolean isChild(List<MedicalRecord> medicalRecords, Person person) {
         MedicalRecord medicalRecord = findMedicalRecord(medicalRecords, person);
         return medicalRecord != null && calculateAge(medicalRecord.getBirthdate()) <= 18;
     }
-
-    // Trouve le dossier médical correspondant à une personne
+    /**
+     * Trouve le dossier médical correspondant à la personne indiquée.
+     *
+     * @param medicalRecords la liste de tous les dossiers médicaux
+     * @param person la personne dont on souhaite trouver le dossier médical
+     * @return le dossier médical correspondant, ou {@code null} si aucun dossier n'est trouvé
+     */
     private MedicalRecord findMedicalRecord(List<MedicalRecord> medicalRecords, Person person) {
         return medicalRecords.stream()
                 .filter(medicalRecord ->
@@ -72,8 +92,12 @@ public class ChildAlertService {
                 .findFirst()
                 .orElse(null);
     }
-
-    // Calcule l'âge à partir de la date de naissance
+    /**
+     * Calcule l'âge en années à partir d'une date de naissance au format MM/dd/yyyy.
+     *
+     * @param birthdate la date de naissance en format chaîne de caractères (MM/dd/yyyy)
+     * @return l'âge en années
+     */
     private int calculateAge(String birthdate) {
         LocalDate birthDate = LocalDate.parse(birthdate, DateTimeFormatter.ofPattern("MM/dd/yyyy"));
         return Period.between(birthDate, LocalDate.now()).getYears();

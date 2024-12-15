@@ -7,6 +7,12 @@ public class DataWrapper {
     private  List<Firestation> firestations;
     private List<MedicalRecord> medicalRecords;
 
+    public DataWrapper(List<Person> persons, List<Firestation> firestations, List<MedicalRecord> medicalRecords) {
+        this.persons = persons;
+        this.firestations = firestations;
+        this.medicalRecords = medicalRecords;
+    }
+
     public List<Person> getPersons() {
         return persons;
     }

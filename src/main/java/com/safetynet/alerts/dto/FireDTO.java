@@ -21,6 +21,14 @@ public class FireDTO {
         this.station = station;
     }
 
+    public String getStation() {
+        return station;
+    }
+
+    public void setStation(String station) {
+        this.station = station;
+    }
+
     public String getFirstName() {
         return firstName;
     }

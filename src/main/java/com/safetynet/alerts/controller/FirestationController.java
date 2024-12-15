@@ -8,6 +8,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+/**
+ * Contrôleur REST permettant de récupérer des informations sur les personnes couvertes par une caserne de pompiers donnée.
+ */
 
 @RestController // Déclare cette classe comme un contrôleur REST
 public class  FirestationController {
@@ -21,6 +24,14 @@ public class  FirestationController {
 
     // Endpoint pour récupérer les personnes par numéro de caserne
     @GetMapping("/firestation")
+    /**
+     * Récupère une liste de personnes ainsi que le nombre d'adultes et d'enfants couverts par une caserne de pompiers spécifique.
+     *
+     * @param stationNumber le numéro de la station de pompiers pour laquelle on souhaite obtenir les informations
+     * @return une réponse HTTP contenant un objet {@link FirestationResponseDTO} avec les informations,
+     *         ou un statut 404 si aucune personne n’est trouvée
+     */
+
     public ResponseEntity<FirestationResponseDTO> getPersonsByStationNumber(@RequestParam int stationNumber) {
         logger.info("Requête reçue pour /firestation avec stationNumber={}", stationNumber);
 

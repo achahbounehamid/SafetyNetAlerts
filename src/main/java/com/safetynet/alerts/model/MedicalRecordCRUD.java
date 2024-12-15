@@ -9,7 +9,7 @@ public class MedicalRecordCRUD {
     private List<String> medications;
     private List<String> allergies;
 
-    public MedicalRecordCRUD(String firstName, String lastName, String birthdate, String birthDate, List<String> medications, List<String> allergies) {
+    public MedicalRecordCRUD(String firstName, String lastName, String birthdate, List<String> medications, List<String> allergies) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthdate = birthdate;

@@ -62,7 +62,6 @@
 			<artifactId>spring-boot-starter-logging</artifactId>
 		</dependency>
 
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -86,13 +85,14 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<!-- MySQL Connector -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.33</version>
-			<scope>runtime</scope>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>4.10.0</version>
+			<scope>test</scope>
 		</dependency>
+
+
 		<!-- Test Dependencies -->
 	</dependencies>
 	<build>
@@ -101,6 +101,9 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<!-- Activer le chargement dynamique et le traçage des agents -->
+					<mainClass>com.safetynet.alerts.SafetyNetAlertsApplication</mainClass>
+					<jvmArguments>-XX:+EnableDynamicAgentLoading -Djdk.instrument.traceUsage</jvmArguments>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>

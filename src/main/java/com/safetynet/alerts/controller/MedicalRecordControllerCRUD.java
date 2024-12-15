@@ -9,6 +9,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+/**
+ * Contrôleur REST offrant des opérations CRUD sur les dossiers médicaux
+ * (ajout, mise à jour, suppression, et consultation).
+ */
 
 @RestController
 @RequestMapping("/medicalRecordCRUD")
@@ -18,12 +22,28 @@ public class MedicalRecordControllerCRUD {
     private MedicalRecordServiceCRUD medicalRecordService;
 
     @PostMapping
+    /**
+     * Ajoute un nouveau dossier médical.
+     *
+     * @param medicalRecord l'objet {@link MedicalRecordCRUD} représentant le dossier médical à ajouter
+     * @return une réponse HTTP 200 contenant le dossier médical ajouté
+     */
+
     public ResponseEntity<MedicalRecordCRUD> addMedicalRecord(@RequestBody MedicalRecordCRUD medicalRecord) {
         MedicalRecordCRUD savedRecord = medicalRecordService.addMedicalRecord(medicalRecord);
         return ResponseEntity.ok(savedRecord);
     }
 
     @PutMapping("/{firstName}/{lastName}")
+    /**
+     * Met à jour un dossier médical existant.
+     *
+     * @param firstName le prénom associé au dossier médical
+     * @param lastName le nom de famille associé au dossier médical
+     * @param updatedRecord l'objet {@link MedicalRecordCRUD} contenant les informations mises à jour
+     * @return une réponse HTTP 200 si la mise à jour a réussi, 404 sinon
+     */
+
     public ResponseEntity<Void> updateMedicalRecord(
 
             @PathVariable String firstName,
@@ -40,6 +60,13 @@ public class MedicalRecordControllerCRUD {
     }
 
     @DeleteMapping("/{firstName}/{lastName}")
+    /**
+     * Supprime un dossier médical spécifique.
+     *
+     * @param firstName le prénom associé au dossier médical à supprimer
+     * @param lastName le nom de famille associé au dossier médical à supprimer
+     * @return une réponse HTTP 204 si la suppression a réussi, 404 sinon
+     */
     public ResponseEntity<Void> deleteMedicalRecord(@PathVariable String firstName, @PathVariable String lastName) {
         if (medicalRecordService.deleteMedicalRecord(firstName, lastName)) {
             logger.info("Dossier médical supprimé avec succès pour : {} {}", firstName, lastName);
@@ -50,6 +77,13 @@ public class MedicalRecordControllerCRUD {
     }
 
     @GetMapping("/{firstName}/{lastName}")
+    /**
+     * Récupère un dossier médical spécifique en fonction du prénom et du nom de famille.
+     *
+     * @param firstName le prénom associé au dossier médical à récupérer
+     * @param lastName le nom de famille associé au dossier médical à récupérer
+     * @return une réponse HTTP 200 avec le dossier médical si trouvé, 404 sinon
+     */
     public ResponseEntity<MedicalRecordCRUD> getMedicalRecordByFullName(
             @PathVariable String firstName,
             @PathVariable String lastName) {

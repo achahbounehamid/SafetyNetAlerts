@@ -5,7 +5,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
+/**
+ * Service permettant de récupérer la liste des adresses e-mail
+ * de tous les habitants d'une ville spécifiée.
+ */
 @Service
 public class CommunityEmailService {
 
@@ -15,7 +18,12 @@ public class CommunityEmailService {
 
         this.dataService = dataService;
     }
-
+    /**
+     * Récupère la liste des adresses e-mail des habitants de la ville indiquée.
+     *
+     * @param city la ville pour laquelle on souhaite obtenir la liste d'e-mails
+     * @return une liste de chaînes de caractères représentant les adresses e-mail, sans doublons
+     */
     public List<String> getEmailsByCity(String city) {
         // Récupérer les données JSON
         DataWrapper data = dataService.getData();

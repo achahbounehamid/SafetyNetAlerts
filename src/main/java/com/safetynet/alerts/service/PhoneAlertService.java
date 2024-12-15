@@ -9,7 +9,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
+/**
+ * Service permettant de récupérer les numéros de téléphone des personnes
+ * couvertes par une caserne de pompiers spécifique.
+ */
 @Service
 public class PhoneAlertService {
     private static final Logger logger = LoggerFactory.getLogger(PhoneAlertService.class);
@@ -19,7 +22,13 @@ public class PhoneAlertService {
     public PhoneAlertService(DataService dataService) {
         this.dataService = dataService;
     }
-
+    /**
+     * Récupère la liste des numéros de téléphone associés aux habitants
+     * des adresses couvertes par une caserne de pompiers donnée.
+     *
+     * @param firestationNumber le numéro de la caserne de pompiers
+     * @return un objet {@link PhoneAlertDTO} contenant la liste des numéros de téléphone sans doublons
+     */
     public PhoneAlertDTO getPhoneNumbersByFirestation(int firestationNumber) {
         // Récupère les données JSON
         DataWrapper data = dataService.getData();

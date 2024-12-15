@@ -2,7 +2,7 @@ package com.safetynet.alerts.dto;
 
 import java.util.List;
 
-public class CommunityEmailDTO {
+public class  CommunityEmailDTO {
     private List<String> emails;
 
     public CommunityEmailDTO(List<String> emails) {

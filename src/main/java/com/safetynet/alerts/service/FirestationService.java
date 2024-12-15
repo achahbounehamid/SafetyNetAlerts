@@ -13,7 +13,10 @@ import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
-
+/**
+ * Service permettant de récupérer les informations sur les personnes couvertes par une caserne de pompiers donnée.
+ * Il calcule également le nombre d'enfants et d'adultes parmi ces personnes.
+ */
 @Service // Déclare cette classe comme un service Spring
 public class FirestationService {
 
@@ -22,8 +25,14 @@ public class FirestationService {
     public FirestationService(DataService dataService) {
         this.dataService = dataService; // Injection du service DataService
     }
-
-    // Méthode pour obtenir les personnes couvertes par une caserne
+    /**
+     * Récupère la liste des personnes couvertes par une caserne de pompiers spécifique,
+     * ainsi que le nombre d'enfants et d'adultes parmi elles.
+     *
+     * @param stationNumber le numéro de la caserne de pompiers
+     * @return un objet {@link FirestationResponseDTO} contenant la liste des personnes
+     *         (avec prénom, nom, adresse, téléphone), ainsi que le nombre d'enfants et d'adultes
+     */
     public FirestationResponseDTO getPersonsByStation(int stationNumber) {
         DataWrapper data = dataService.getData(); // Récupère les données depuis le DataService
 
@@ -56,8 +65,14 @@ public class FirestationService {
 
         return response; // Retourne la réponse
     }
-
-    // Méthode pour vérifier si une personne est un enfant
+    /**
+     * Détermine si une personne est considérée comme un enfant (âgée de 18 ans ou moins)
+     * en fonction de son dossier médical.
+     *
+     * @param medicalRecords la liste de tous les dossiers médicaux
+     * @param person la personne dont on veut déterminer l'âge
+     * @return {@code true} si la personne est un enfant (≤ 18 ans), {@code false} sinon
+     */
     private boolean isChild(List<MedicalRecord> medicalRecords, Person person) {
         return medicalRecords.stream()
                 .filter(m -> m.getFirstName().equals(person.getFirstName()) &&

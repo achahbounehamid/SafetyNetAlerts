@@ -33,6 +33,10 @@ public class MedicalRecordServiceCRUD {
             record.setBirthdate(updatedRecord.getBirthdate());
             record.setMedications(updatedRecord.getMedications());
             record.setAllergies(updatedRecord.getAllergies());
+
+            // Appel de save() pour persister les changements
+            medicalRecordRepository.save(record);
+
             logger.info("Dossier médical mis à jour avec succès pour : {} {}", firstName, lastName);
             return true; // Indique que la mise à jour a réussi
         }

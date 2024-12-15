@@ -15,7 +15,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-
+/**
+ * Service permettant de récupérer des informations sur les personnes vivant à une adresse spécifique,
+ * ainsi que le numéro de la caserne de pompiers les desservant.
+ * Les informations renvoyées incluent l'âge, le téléphone, les médicaments et les allergies des résidents.
+ */
 @Service
 public class FireService {
 
@@ -25,7 +29,12 @@ public class FireService {
     public FireService(DataService dataService) {
         this.dataService = dataService;
     }
-
+    /**
+     * Récupère les informations sur les résidents d'une adresse spécifique, ainsi que la station de pompiers associée.
+     *
+     * @param address l'adresse pour laquelle on souhaite obtenir les informations
+     * @return une liste de {@link FireDTO} contenant les données relatives aux résidents et à la caserne de pompiers
+     */
     public List<FireDTO> getFireInfo(String address) {
         // Récupère les données JSON
         DataWrapper data = dataService.getData();
@@ -70,8 +79,12 @@ public class FireService {
                 })
                 .collect(Collectors.toList());
     }
-
-    // Méthode pour calculer l'âge
+    /**
+     * Calcule l'âge d'une personne à partir de sa date de naissance, au format MM/dd/yyyy.
+     *
+     * @param birthdate la date de naissance sous forme de chaîne de caractères (MM/dd/yyyy), ou null
+     * @return l'âge en années, ou 0 si aucune date de naissance n'est fournie
+     */
     private int calculateAge(String birthdate) {
         if (birthdate == null) return 0;
         LocalDate birthDate = LocalDate.parse(birthdate, DateTimeFormatter.ofPattern("MM/dd/yyyy"));

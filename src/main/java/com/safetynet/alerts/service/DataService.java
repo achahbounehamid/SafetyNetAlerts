@@ -10,7 +10,10 @@ import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-
+/**
+ * Service chargé de charger et de fournir les données issues du fichier JSON.
+ * Les données sont chargées au démarrage de l'application et stockées en mémoire.
+ */
 @Service
 public class DataService {
     private static final Logger logger = LoggerFactory.getLogger(DataService.class);
@@ -42,8 +45,11 @@ public class DataService {
         logger.info("Chemin du fichier : {}", resource.getFilename());
         return objectMapper.readValue(resource.getInputStream(), DataWrapper.class);
     }
-
-    // Getter pour accéder aux données chargées
+    /**
+     * Récupère l'ensemble des données chargées en mémoire depuis le fichier JSON.
+     *
+     * @return un objet {@link DataWrapper} contenant toutes les données chargées
+     */
     public DataWrapper getData() {
         return dataWrapper; // Retourne les données chargées en mémoire
     }

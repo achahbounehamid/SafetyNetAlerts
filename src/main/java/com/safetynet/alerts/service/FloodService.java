@@ -15,15 +15,29 @@ import java.time.format.DateTimeParseException;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-
+/**
+ * Service permettant de récupérer des informations sur les foyers potentiellement affectés par une inondation.
+ * Donne la liste des résidents (avec leurs âges, médicaments, allergies, etc.) par adresse,
+ * pour un ensemble de casernes de pompiers spécifiées.
+ */
 @Service
 public class FloodService {
     private final DataService dataService;
     private static final Logger logger = LoggerFactory.getLogger(FloodService.class);
 
     public FloodService(DataService dataService) {
+
         this.dataService = dataService;
     }
+    /**
+     * Récupère les informations liées à l'inondation pour un ensemble de casernes de pompiers.
+     * Pour chaque caserne spécifiée, cette méthode identifie les adresses qu'elle couvre et
+     * rassemble les informations sur les résidents de ces adresses (âge, médicaments, allergies, téléphone, etc.).
+     *
+     * @param stationNumbers la liste des numéros de casernes pour lesquelles on souhaite obtenir les informations
+     * @return une liste de {@link FloodResponseDTO}, chaque élément contenant une adresse
+     *         et la liste des résidents associés
+     */
     public List<FloodResponseDTO> getFloodInfo(List<Integer> stationNumbers) {
         // Récupère les données JSON
         DataWrapper data = dataService.getData();
@@ -70,8 +84,13 @@ public class FloodService {
         logger.info("Résultats pour les foyers : {}", result.size());
         return result;
     }
-
-    // Méthode pour calculer l'âge
+    /**
+     * Calcule l'âge d'une personne à partir de sa date de naissance au format MM/dd/yyyy.
+     * Si la date est invalide ou absente, l'âge retourné est 0.
+     *
+     * @param birthdate la date de naissance sous forme de chaîne de caractères (MM/dd/yyyy)
+     * @return l'âge en années, ou 0 en cas d'absence ou de format invalide
+     */
     private int calculateAge(String birthdate) {
         try {
             if (birthdate == null) return 0;

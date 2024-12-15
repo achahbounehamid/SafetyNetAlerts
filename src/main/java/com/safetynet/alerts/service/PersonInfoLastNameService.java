@@ -15,6 +15,10 @@ import java.time.format.DateTimeParseException;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
+/**
+ * Service permettant de récupérer les informations (âge, e-mail, adresse, médicaments, allergies)
+ * des personnes ayant un nom de famille spécifique.
+ */
 @Service
 public class PersonInfoLastNameService {
     private final DataService dataService;
@@ -23,7 +27,13 @@ public class PersonInfoLastNameService {
     public PersonInfoLastNameService(DataService dataService) {
         this.dataService = dataService;
     }
-
+    /**
+     * Récupère la liste des informations (identité, adresse, e-mail, âge, médicaments, allergies)
+     * des personnes portant le nom de famille spécifié.
+     *
+     * @param lastName le nom de famille pour lequel on souhaite obtenir les informations
+     * @return une liste de {@link PersonInfoLastNameDTO} contenant les informations des personnes trouvées
+     */
     public List<PersonInfoLastNameDTO> getPersonByLastName(String lastName) {
         DataWrapper data = dataService.getData();
 
@@ -51,8 +61,13 @@ public class PersonInfoLastNameService {
                 })
                 .collect(Collectors.toList());
     }
-
-        // Méthode pour calculer l'âge
+    /**
+     * Calcule l'âge d'une personne à partir de sa date de naissance au format MM/dd/yyyy.
+     * Retourne 0 si la date de naissance est invalide ou absente.
+     *
+     * @param birthdate la date de naissance sous forme de chaîne de caractères (MM/dd/yyyy)
+     * @return l'âge en années, ou 0 en cas de date absente ou invalide
+     */
     private int calculateAge(String birthdate) {
         try {
             if (birthdate == null) return 0;
