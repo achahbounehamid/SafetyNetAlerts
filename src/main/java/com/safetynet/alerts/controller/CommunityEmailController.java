@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Récupère la liste des adresses e-mail de tous les habitants de la ville spécifiée.
  *
- * @param city la ville pour laquelle on souhaite obtenir la liste d'e-mails
+ * @param 'city la ville pour laquelle on souhaite obtenir la liste d'e-mails
  * @return une liste de chaînes de caractères représentant les adresses e-mail des habitants
  */
 
@@ -31,9 +31,6 @@ public class CommunityEmailController {
     public List<String> getEmailsByCity(@RequestParam String city) {
         // Log pour suivre la requête
         logger.info("Requête reçue pour les e-mails des habitants de la ville : {}", city);
-
-
-
         // Appel du service
         return communityEmailService.getEmailsByCity(city);
     }

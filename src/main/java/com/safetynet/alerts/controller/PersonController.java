@@ -48,13 +48,13 @@ public class PersonController {
             @PathVariable String lastName,
             @RequestBody Person updatedPerson) {
         logger.info("Received PUT request for: {} {}", firstName, lastName);
-        logger.info("Request body: {}", updatedPerson);
+        logger.info("Corps de la requête: {}", updatedPerson);
         Person person = personService.updatePerson(firstName, lastName, updatedPerson);
         if (person != null) {
-            logger.info("Person updated successfully: {}", person);
+            logger.info("Personne mise à jour avec succès: {}", person);
             return ResponseEntity.ok(person);
         }
-        logger.warn("Person not found: {} {}", firstName, lastName);
+        logger.warn("Personne non trouvée: {} {}", firstName, lastName);
         return ResponseEntity.notFound().build();
     }
 
@@ -67,12 +67,12 @@ public class PersonController {
      * @return une réponse HTTP 204 si la suppression a réussi, ou 404 si la personne n'est pas trouvée
      */
     public ResponseEntity<Void> deletePerson(@PathVariable String firstName, @PathVariable String lastName) {
-        logger.info("Received DELETE request to remove person: {} {}", firstName, lastName);
+        logger.info("J'ai reçu une demande de SUPPRESSION pour supprimer une personne: {} {}", firstName, lastName);
         if (personService.deletePerson(firstName, lastName)) {
-            logger.info("Person deleted successfully: {} {}", firstName, lastName);
+            logger.info("La personne a été supprimée avec succès: {} {}", firstName, lastName);
             return ResponseEntity.noContent().build();
         }
-        logger.warn("Person not found for deletion: {} {}", firstName, lastName);
+        logger.warn("Personne non trouvée pour suppression: {} {}", firstName, lastName);
         return ResponseEntity.notFound().build();
     }
 
@@ -83,7 +83,7 @@ public class PersonController {
      * @return une réponse HTTP 200 contenant la liste de toutes les personnes
      */
     public ResponseEntity<List<Person>> getAllPersons() {
-        logger.info("Received GET request to fetch all persons.");
+        logger.info("J'ai reçu une demande GET pour récupérer toutes les personnes.");
         return ResponseEntity.ok(personService.getAllPersons());
     }
 }

@@ -35,8 +35,6 @@ public class FireStationControllerCRUD {
         FireStationCRUD savedFireStationCRUD = fireStationServiceCRUD.addFireStationCRUD(fireStationCRUD);
         return ResponseEntity.ok(savedFireStationCRUD);
     }
-
-
     @PutMapping("/{address}")
     /**
      * Met à jour l'adresse d'une station de pompiers existante.
@@ -49,12 +47,12 @@ public class FireStationControllerCRUD {
     public ResponseEntity<Void> updateAddress(
             @PathVariable String address,
             @RequestParam String newAddress) {
-        logger.info("PUT request received to update address: {} to {}", address, newAddress);
+        logger.info("Requête PUT reçue pour mettre à jour l'adresse: {} à {}", address, newAddress);
         if (fireStationServiceCRUD.updateAddress(address, newAddress)) {
-            logger.info("Address updated successfully: {} -> {}", address, newAddress);
+            logger.info("Adresse mise à jour avec succès: {} -> {}", address, newAddress);
             return ResponseEntity.ok().build();
         }
-        logger.warn("Address not found: {}", address);
+        logger.warn("Adresse non trouvée: {}", address);
         return ResponseEntity.notFound().build();
     }
 

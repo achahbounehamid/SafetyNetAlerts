@@ -10,16 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Récupère les informations sur les enfants vivant à l'adresse spécifiée.
  *
- * @param address l'adresse pour laquelle on souhaite obtenir la liste des enfants
+ * @param   'adresse pour laquelle on souhaite obtenir la liste des enfants
  * @return un objet ChildAlertResponseDTO contenant les informations sur les enfants et les adultes
  */
-
-
 @RestController
 /**
  * Contrôleur REST chargé de fournir des informations sur les enfants résidant à une adresse.
  */
-
 public class ChildAlertController {
 
     private final ChildAlertService childAlertService;

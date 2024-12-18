@@ -28,9 +28,12 @@ public class FireStationRepositoryCRUD {
      * @return la station de pompiers sauvegardée
      */
     public FireStationCRUD save(FireStationCRUD fireStationCRUD) {
+        logger.info("Tentative de sauvegarde de la station: {}", fireStationCRUD);
         findByAddress(fireStationCRUD.getAddress())
                 .ifPresent(existing -> fireStations.remove(existing));
+        logger.info("Station existante remplacée: {}");
         fireStations.add(fireStationCRUD);
+        logger.info("Station sauvegardée avec succès: {}", fireStationCRUD);
         return fireStationCRUD;
     }
     /**
@@ -40,6 +43,7 @@ public class FireStationRepositoryCRUD {
      * @return un {@link Optional} contenant la station si trouvée, ou un {@link Optional#empty()} sinon
      */
     public Optional<FireStationCRUD> findByAddress(String address) {
+        logger.info("Recherche de la station avec l'adresse: {}", address);
         return fireStations.stream().filter(f-> f.getAddress().equalsIgnoreCase(address)).findFirst();
     }
     /**
@@ -61,6 +65,7 @@ public class FireStationRepositoryCRUD {
      * @return {@code true} si la station a été supprimée, {@code false} si aucune station correspondant à l'adresse n'a été trouvée
      */
     public boolean deleteByAddress(String address){
+        logger.info("Tentative de suppression de la station avec l'adresse: {}", address);
         return fireStations.removeIf(f -> f.getAddress().equalsIgnoreCase(address));
     }
     /**
@@ -69,6 +74,7 @@ public class FireStationRepositoryCRUD {
      * @return une liste de toutes les {@link FireStationCRUD} enregistrées
      */
     public List<FireStationCRUD> findAll() {
+        logger.info("Récupération de toutes les stations enregistrées. Nombre total: {}", fireStations.size());
         return  new ArrayList<>(fireStations);
     }
 }

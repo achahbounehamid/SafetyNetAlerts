@@ -12,6 +12,7 @@ import java.util.Optional;
  */
 @Repository
 public class MedicalRecordRepositoryCRUD {
+
     private List<MedicalRecordCRUD> medicalRecords = new ArrayList<>();
     /**
      * Ajoute un nouveau dossier médical.

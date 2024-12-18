@@ -49,7 +49,7 @@ public class MedicalRecordControllerCRUD {
             @PathVariable String firstName,
             @PathVariable String lastName,
             @RequestBody MedicalRecordCRUD updatedRecord) {
-        logger.info("Received PUT request for firstName: {}, lastName: {}", firstName, lastName);
+        logger.info("Requête PUT reçue pour firstName: {}, lastName: {}", firstName, lastName);
         logger.info("Payload: {}", updatedRecord);
         if (medicalRecordService.updateMedicalRecord(firstName, lastName, updatedRecord)) {
             logger.info("Mise à jour réussie pour le dossier médical de : {} {}", firstName, lastName);
@@ -87,7 +87,7 @@ public class MedicalRecordControllerCRUD {
     public ResponseEntity<MedicalRecordCRUD> getMedicalRecordByFullName(
             @PathVariable String firstName,
             @PathVariable String lastName) {
-        logger.info("Received GET request for firstName: {}, lastName: {}", firstName, lastName);
+        logger.info("Requête GET reçue pour firstName: {}, lastName: {}", firstName, lastName);
         MedicalRecordCRUD medicalRecord = medicalRecordService.getMedicalRecord(firstName, lastName);
         if (medicalRecord != null) {
             logger.info("Dossier médical trouvé pour : {} {}", firstName, lastName);
