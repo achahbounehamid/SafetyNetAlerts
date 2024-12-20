@@ -64,10 +64,32 @@ public class FireStationRepositoryCRUD {
      * @param address l'adresse de la station à supprimer
      * @return {@code true} si la station a été supprimée, {@code false} si aucune station correspondant à l'adresse n'a été trouvée
      */
-    public boolean deleteByAddress(String address){
+//    public boolean deleteByAddress(String address){
+//        logger.info("Tentative de suppression de la station avec l'adresse: {}", address);
+//        return fireStations.removeIf(f -> f.getAddress().equalsIgnoreCase(address));
+//    }
+    public boolean deleteByAddress(String address) {
         logger.info("Tentative de suppression de la station avec l'adresse: {}", address);
-        return fireStations.removeIf(f -> f.getAddress().equalsIgnoreCase(address));
+
+        // Log des adresses actuelles avant suppression
+        fireStations.forEach(f -> logger.debug("Adresse dans la liste : {}", f.getAddress()));
+
+        // Suppression de la station
+        boolean isRemoved = fireStations.removeIf(f -> f.getAddress().equalsIgnoreCase(address));
+
+        // Log du résultat
+        if (isRemoved) {
+            logger.info("Station supprimée avec succès: {}", address);
+        } else {
+            logger.warn("Aucune station trouvée pour l'adresse: {}", address);
+        }
+
+        // Log des adresses après suppression
+        fireStations.forEach(f -> logger.debug("Adresse restante dans la liste : {}", f.getAddress()));
+
+        return isRemoved;
     }
+
     /**
      * Récupère la liste de toutes les stations de pompiers.
      *

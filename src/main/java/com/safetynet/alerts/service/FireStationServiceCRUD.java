@@ -3,16 +3,22 @@ package com.safetynet.alerts.service;
 import com.safetynet.alerts.model.FireStationCRUD;
 import com.safetynet.alerts.repository.FireStationRepositoryCRUD;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+
+
 /**
  * Service offrant des opérations CRUD (Create, Read, Update, Delete) pour les casernes de pompiers.
  * Il délègue les opérations au {@link FireStationRepositoryCRUD}.
  */
 @Service
 public class FireStationServiceCRUD {
+    private static final Logger logger = LoggerFactory.getLogger(FireStationServiceCRUD.class);
     @Autowired
     private FireStationRepositoryCRUD fireStationRepositoryCRUD;
     /**
@@ -40,9 +46,21 @@ public class FireStationServiceCRUD {
      * @param address l'adresse de la caserne à supprimer
      * @return {@code true} si la suppression a réussi, {@code false} sinon
      */
+//    public boolean deleteFireStationByAddress(String address) {
+//        return fireStationRepositoryCRUD.deleteByAddress(address);
+//    }
     public boolean deleteFireStationByAddress(String address) {
-        return fireStationRepositoryCRUD.deleteByAddress(address);
+        logger.info("Avant suppression, liste des stations :");
+        fireStationRepositoryCRUD.findAll().forEach(f -> logger.debug("Adresse : {}", f.getAddress()));
+
+        boolean isDeleted = fireStationRepositoryCRUD.deleteByAddress(address);
+
+        logger.info("Après suppression, liste des stations :");
+        fireStationRepositoryCRUD.findAll().forEach(f -> logger.debug("Adresse : {}", f.getAddress()));
+
+        return isDeleted;
     }
+
     /**
      * Récupère la liste de toutes les casernes de pompiers.
      *

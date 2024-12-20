@@ -13,19 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SafetyNet Alerts</name>
 	<description>Backend for SafetyNet Alerts</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+
 	<properties>
 		<start-class>com.safetynet.alerts.SafetyNetAlertsApplication</start-class>
 		<java.version>17</java.version>
@@ -103,7 +91,7 @@
 				<configuration>
 					<!-- Activer le chargement dynamique et le traçage des agents -->
 					<mainClass>com.safetynet.alerts.SafetyNetAlertsApplication</mainClass>
-					<jvmArguments>-XX:+EnableDynamicAgentLoading -Djdk.instrument.traceUsage</jvmArguments>
+<!--					<jvmArguments>-XX:+EnableDynamicAgentLoading -Djdk.instrument.traceUsage</jvmArguments>-->
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>

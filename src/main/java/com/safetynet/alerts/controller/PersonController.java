@@ -47,7 +47,7 @@ public class PersonController {
             @PathVariable String firstName,
             @PathVariable String lastName,
             @RequestBody Person updatedPerson) {
-        logger.info("Received PUT request for: {} {}", firstName, lastName);
+        logger.info("Requête PUT reçue pour: {} {}", firstName, lastName);
         logger.info("Corps de la requête: {}", updatedPerson);
         Person person = personService.updatePerson(firstName, lastName, updatedPerson);
         if (person != null) {
