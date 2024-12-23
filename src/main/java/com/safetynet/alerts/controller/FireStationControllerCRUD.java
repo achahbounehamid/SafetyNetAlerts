@@ -44,21 +44,19 @@ public class FireStationControllerCRUD {
      * @param newAddress la nouvelle adresse à associer à la station
      * @return une réponse HTTP 200 si la mise à jour a réussi, 404 si l'adresse n'a pas été trouvée
      */
-
-    public ResponseEntity<Void> updateAddress(
+    public ResponseEntity<Void> updateStation(
             @PathVariable String address,
             @RequestBody FireStationCRUD updatedFireStation) {
-        logger.info("Requête PUT reçue pour mettre à jour l'adresse: {}", address);
-        if (fireStationServiceCRUD.updateAddress(address, updatedFireStation.getAddress())) {
-            logger.info("Adresse mise à jour avec succès: {} -> {}", address, updatedFireStation.getAddress());
+        logger.info("Requête PUT reçue pour mettre à jour : {}", address);
+
+        boolean updated = fireStationServiceCRUD.updateStation(address, updatedFireStation);
+        if (updated) {
+            logger.info("Station mise à jour avec succès : {} -> {}", address, updatedFireStation);
             return ResponseEntity.ok().build();
         }
-        logger.warn("Adresse non trouvée: {}", address);
+        logger.warn("Adresse non trouvée : {}", address);
         return ResponseEntity.notFound().build();
     }
-
-
-
 
     @DeleteMapping("/{address}")
     /**
@@ -67,34 +65,15 @@ public class FireStationControllerCRUD {
      * @param address l'adresse de la station à supprimer
      * @return une réponse HTTP 204 si la suppression a réussi, 404 sinon
      */
-//    public ResponseEntity<Void> deleteFireStationByAddress(@PathVariable String address) {
-//        logger.info("Requête DELETE reçue pour supprimer l'adresse: {}", address);
-//        if (fireStationServiceCRUD.deleteFireStationByAddress(address)) {
-//            logger.info("Adresse supprimée avec succès: {}", address);
-//            return ResponseEntity.noContent().build();
-//        }
-//        logger.warn("Adresse non trouvée pour suppression: {}", address);
-//        return ResponseEntity.notFound().build();
-//
-//    }
     public ResponseEntity<Void> deleteFireStationByAddress(@PathVariable String address) {
         logger.info("Requête DELETE reçue pour supprimer l'adresse: {}", address);
-
-        // Log des adresses existantes avant suppression
-        fireStationServiceCRUD.getAllFireStation().forEach(f -> logger.debug("Avant suppression : {}", f.getAddress()));
-
-        // Tentative de suppression
         if (fireStationServiceCRUD.deleteFireStationByAddress(address)) {
             logger.info("Adresse supprimée avec succès: {}", address);
-
-            // Log des adresses existantes après suppression
-            fireStationServiceCRUD.getAllFireStation().forEach(f -> logger.debug("Après suppression : {}", f.getAddress()));
-
             return ResponseEntity.noContent().build();
         }
-
         logger.warn("Adresse non trouvée pour suppression: {}", address);
         return ResponseEntity.notFound().build();
+
     }
 
     @GetMapping

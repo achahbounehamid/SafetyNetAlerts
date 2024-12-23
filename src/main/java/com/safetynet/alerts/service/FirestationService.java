@@ -1,4 +1,5 @@
 package com.safetynet.alerts.service;
+import com.safetynet.alerts.model.FireStationCRUD;
 
 import com.safetynet.alerts.dto.FirestationResponseDTO;
 import com.safetynet.alerts.dto.PersonInfoDTO;
@@ -9,11 +10,11 @@ import com.safetynet.alerts.model.MedicalRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 /**
  * Service permettant de récupérer les informations sur les personnes couvertes par une caserne de pompiers donnée.
@@ -88,4 +89,59 @@ public class FirestationService {
                     return Period.between(birthdate, LocalDate.now()).getYears() <= 18; // Vérifie si l'âge est ≤ 18
                 });
     }
+    /**
+     * Recherche une station de pompiers par son adresse.
+     *
+     * @param address l'adresse de la station à rechercher
+     * @return un Optional contenant la station si elle est trouvée, ou un Optional vide sinon
+     */
+    public Optional<Firestation> findByAddress(String address) {
+        logger.info("Recherche de la station pour l'adresse : {}", address);
+
+        DataWrapper data = dataService.getData(); // Récupération des données
+        return data.getFirestations().stream()
+                .filter(f -> f.getAddress().equalsIgnoreCase(address)) // Filtre par adresse
+                .findFirst(); // Retourne le premier résultat trouvé
+    }
+
+    /**
+     * Met à jour une station de pompiers en modifiant son adresse et/ou son numéro de caserne.
+     *
+     * @param currentAddress l'adresse actuelle de la station
+     * @param updatedFireStation un objet contenant les nouvelles valeurs pour l'adresse et/ou le numéro de caserne
+     * @return {@code true} si la mise à jour a réussi (station trouvée et modifiée), {@code false} sinon
+     */
+    public boolean updateStation(String currentAddress, FireStationCRUD updatedFireStation) {
+        logger.info("Mise à jour de la station avec l'adresse actuelle : {}", currentAddress);
+
+        // Récupère les données actuelles
+        DataWrapper data = dataService.getData();
+
+        // Recherche de la caserne existante par adresse
+        Optional<Firestation> firestationOptional = data.getFirestations().stream()
+                .filter(f -> f.getAddress().equalsIgnoreCase(currentAddress))
+                .findFirst();
+
+        if (firestationOptional.isPresent()) {
+            Firestation firestation = firestationOptional.get();
+
+            // Mise à jour de l'adresse si elle est spécifiée
+            if (updatedFireStation.getAddress() != null) {
+                firestation.setAddress(updatedFireStation.getAddress());
+                logger.info("Adresse mise à jour : {} -> {}", currentAddress, updatedFireStation.getAddress());
+            }
+
+            // Mise à jour du numéro de caserne si une valeur valide est fournie
+            if (updatedFireStation.getStationNumber() > 0) {
+                firestation.setStation(String.valueOf(updatedFireStation.getStationNumber()));
+                logger.info("Numéro de caserne mis à jour : {} -> {}", firestation.getStation(), updatedFireStation.getStationNumber());
+            }
+
+            return true;
+        }
+
+        logger.warn("Station introuvable pour l'adresse : {}", currentAddress);
+        return false;
+    }
+
 }

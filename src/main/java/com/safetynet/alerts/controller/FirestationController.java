@@ -1,13 +1,13 @@
 package com.safetynet.alerts.controller;
+import com.safetynet.alerts.model.FireStationCRUD;
 
 import com.safetynet.alerts.dto.FirestationResponseDTO;
 import com.safetynet.alerts.service.FirestationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 /**
  * Contrôleur REST permettant de récupérer des informations sur les personnes couvertes par une caserne de pompiers donnée.
  */
@@ -43,5 +43,25 @@ public class  FirestationController {
         }
 
         return ResponseEntity.ok(response); // Retourne 200 avec la réponse
+    }
+
+    /**
+     * Met à jour une station de pompiers.
+     *
+     * @param address l'adresse actuelle de la station
+     * @param updatedFireStation l'objet contenant les nouvelles valeurs pour l'adresse et/ou le numéro de caserne
+     * @return une réponse HTTP 200 si la mise à jour a réussi, ou 404 si l'adresse n'a pas été trouvée
+     */
+    @PutMapping("/{address}")
+    public ResponseEntity<Void> updateStation(
+            @PathVariable String address,
+            @RequestBody FireStationCRUD updatedFireStation) {
+        boolean updated = firestationService.updateStation(address, updatedFireStation);
+
+        if (updated) {
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 }

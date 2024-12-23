@@ -9,12 +9,16 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.http.ResponseEntity;
-
+import com.safetynet.alerts.model.FireStationCRUD;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.times;
 import java.util.Arrays;
 import java.util.Collections;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
+
+
 /**
  * Classe de test pour {@link FirestationController}.
  * Vérifie le bon fonctionnement du point de terminaison {@code /firestationCRUD}.
@@ -76,5 +80,45 @@ class FirestationControllerTest {
         // Vérifications
         assertEquals(404, response.getStatusCodeValue());
     }
+    /**
+     * Teste la méthode {@link FirestationController#
+     * (String, FireStationCRUD)}
+     * pour une mise à jour valide de l'adresse et/ou du numéro de caserne.
+     */
+    @Test
+    void testUpdateStation_ValidRequest() {
+        // Données simulées
+        FireStationCRUD updatedFireStation = new FireStationCRUD("123 New St", 5);
+
+        when(firestationService.updateStation("1509 Culver St", updatedFireStation)).thenReturn(true);
+
+        // Appel de la méthode
+        ResponseEntity<Void> response = firestationController.updateStation("1509 Culver St", updatedFireStation);
+
+        // Vérifications
+        assertEquals(200, response.getStatusCodeValue());
+        verify(firestationService, times(1)).updateStation("1509 Culver St", updatedFireStation);
+    }
+
+    /**
+     * Teste la méthode {@link FirestationController#updateStation(String, FireStationCRUD)}
+     * pour une mise à jour invalide où l'adresse n'existe pas.
+     */
+    @Test
+    void testUpdateStation_InvalidRequest() {
+        // Données simulées
+        FireStationCRUD updatedFireStation = new FireStationCRUD("123 New St", 5);
+
+        when(firestationService.updateStation("Unknown Address", updatedFireStation)).thenReturn(false);
+
+        // Appel de la méthode
+        ResponseEntity<Void> response = firestationController.updateStation("Unknown Address", updatedFireStation);
+
+        // Vérifications
+        assertEquals(404, response.getStatusCodeValue());
+        verify(firestationService, times(1)).updateStation("Unknown Address", updatedFireStation);
+    }
+
+
 }
 

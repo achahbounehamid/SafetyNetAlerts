@@ -47,48 +47,50 @@ public class FireStationRepositoryCRUD {
         return fireStations.stream().filter(f-> f.getAddress().equalsIgnoreCase(address)).findFirst();
     }
     /**
-     * Met à jour l'adresse d'une station de pompiers existante.
+     * Met à jour une station de pompiers en modifiant son adresse et/ou son numéro de caserne dans le dépôt.
      *
      * @param currentAddress l'adresse actuelle de la station de pompiers
-     * @param newAddress la nouvelle adresse à affecter à la station
-     * @return {@code true} si la mise à jour a réussi (station trouvée), {@code false} sinon
+     * @param updatedFireStation un objet contenant les nouvelles valeurs pour l'adresse et/ou le numéro de caserne
+     * @return {@code true} si la mise à jour a réussi (station trouvée et modifiée), {@code false} sinon
      */
-    public boolean updateAddress(String currentAddress, String newAddress) {
-        Optional<FireStationCRUD> fireStation = findByAddress(currentAddress);
-        fireStation.ifPresent(f -> f.setAddress(newAddress));
-        return fireStation.isPresent();
+    public boolean updateStation(String currentAddress, FireStationCRUD updatedFireStation) {
+        logger.info("Début de la mise à jour dans le dépôt pour l'adresse actuelle : {}", currentAddress);
+
+        // Parcours de la liste des stations pour trouver celle qui correspond à l'adresse actuelle
+        for (FireStationCRUD fireStation : fireStations) {
+            if (fireStation.getAddress().equalsIgnoreCase(currentAddress)) {
+                // Mise à jour de l'adresse si une nouvelle adresse est spécifiée
+                if (updatedFireStation.getAddress() != null) {
+                    logger.info("Mise à jour de l'adresse dans le dépôt : {} -> {}", fireStation.getAddress(), updatedFireStation.getAddress());
+                    fireStation.setAddress(updatedFireStation.getAddress());
+                }
+
+                // Mise à jour du numéro de caserne si une valeur valide est spécifiée (> 0)
+                if (updatedFireStation.getStationNumber() > 0) {
+                    logger.info("Mise à jour du numéro de caserne dans le dépôt : {} -> {}", fireStation.getStationNumber(), updatedFireStation.getStationNumber());
+                    fireStation.setStationNumber(updatedFireStation.getStationNumber());
+                }
+
+                logger.info("Mise à jour réussie dans le dépôt pour l'adresse actuelle : {}", currentAddress);
+                return true; // Retourne true après une mise à jour réussie
+            }
+        }
+
+        logger.warn("Aucune station trouvée dans le dépôt pour l'adresse : {}", currentAddress);
+        return false; // Retourne false si aucune station n'a été trouvée
     }
+
     /**
      * Supprime une station de pompiers en fonction de son adresse.
      *
      * @param address l'adresse de la station à supprimer
      * @return {@code true} si la station a été supprimée, {@code false} si aucune station correspondant à l'adresse n'a été trouvée
      */
-//    public boolean deleteByAddress(String address){
-//        logger.info("Tentative de suppression de la station avec l'adresse: {}", address);
-//        return fireStations.removeIf(f -> f.getAddress().equalsIgnoreCase(address));
-//    }
-    public boolean deleteByAddress(String address) {
+    public boolean deleteByAddress(String address){
         logger.info("Tentative de suppression de la station avec l'adresse: {}", address);
-
-        // Log des adresses actuelles avant suppression
-        fireStations.forEach(f -> logger.debug("Adresse dans la liste : {}", f.getAddress()));
-
-        // Suppression de la station
-        boolean isRemoved = fireStations.removeIf(f -> f.getAddress().equalsIgnoreCase(address));
-
-        // Log du résultat
-        if (isRemoved) {
-            logger.info("Station supprimée avec succès: {}", address);
-        } else {
-            logger.warn("Aucune station trouvée pour l'adresse: {}", address);
-        }
-
-        // Log des adresses après suppression
-        fireStations.forEach(f -> logger.debug("Adresse restante dans la liste : {}", f.getAddress()));
-
-        return isRemoved;
+        return fireStations.removeIf(f -> f.getAddress().equalsIgnoreCase(address));
     }
+
 
     /**
      * Récupère la liste de toutes les stations de pompiers.

@@ -1,22 +1,26 @@
 package com.safetynet.alerts.service;
 
 import com.safetynet.alerts.dto.FirestationResponseDTO;
-import com.safetynet.alerts.dto.PersonInfoDTO;
-import com.safetynet.alerts.model.DataWrapper;
-import com.safetynet.alerts.model.Firestation;
-import com.safetynet.alerts.model.MedicalRecord;
-import com.safetynet.alerts.model.Person;
+import com.safetynet.alerts.model.FireStationCRUD;
+
+
+import com.safetynet.alerts.model.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.times;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
+
+
 /**
  * Classe de test pour le service {@link FirestationService}.
  * Vérifie le bon fonctionnement des méthodes liées à la récupération des informations de personnes par numéro de caserne.
@@ -85,5 +89,51 @@ class FirestationServiceTest {
         assertEquals(0, result.getNumberOfChildren());
         assertEquals(0, result.getNumberOfAdults());
     }
+    /**
+     * Teste la méthode {@link FirestationService#updateStation(String, FireStationCRUD)}
+     * pour une mise à jour réussie.
+     */
+    @Test
+    void testUpdateStation_ValidStation() {
+        // Données simulées
+        FireStationCRUD updatedStation = new FireStationCRUD("123 New St", 5);
+
+        List<Firestation> firestations = Arrays.asList(new Firestation("1509 Culver St", "3"));
+        DataWrapper mockData = new DataWrapper(Collections.emptyList(), firestations, Collections.emptyList());
+
+        when(dataService.getData()).thenReturn(mockData);
+
+        boolean result = firestationService.updateStation("1509 Culver St", updatedStation);
+
+        // Vérifications
+        assertTrue(result);
+        assertEquals("123 New St", firestations.get(0).getAddress());
+        assertEquals("5", firestations.get(0).getStation());
+    }
+
+
+    /**
+     * Teste la méthode {@link FirestationService#updateStation(String, FireStationCRUD)}
+     * pour une mise à jour échouée (adresse inexistante).
+     */
+    @Test
+    void testUpdateStation_InvalidStation() {
+        // Données simulées
+        FireStationCRUD updatedStation = new FireStationCRUD("123 New St", 5);
+
+        // Simulation d'une liste vide de stations
+        List<Firestation> firestations = Collections.emptyList();
+        DataWrapper mockData = new DataWrapper(Collections.emptyList(), firestations, Collections.emptyList());
+
+        when(dataService.getData()).thenReturn(mockData);
+
+        // Appel de la méthode
+        boolean result = firestationService.updateStation("Unknown Address", updatedStation);
+
+        // Vérifications
+        assertFalse(result);
+    }
+
+
 }
 
