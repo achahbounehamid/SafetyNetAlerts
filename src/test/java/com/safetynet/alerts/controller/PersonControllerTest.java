@@ -1,9 +1,9 @@
+package com.safetynet.alerts.controller;
 import com.safetynet.alerts.SafetyNetAlertsApplication;
 import com.safetynet.alerts.controller.PersonController;
 import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.service.PersonService;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;

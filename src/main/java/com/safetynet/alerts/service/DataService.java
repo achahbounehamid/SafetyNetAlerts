@@ -35,6 +35,7 @@ public class DataService {
             logger.info("Données JSON chargées avec succès !");
         } catch (IOException e) {
             logger.error("Erreur lors du chargement des données JSON : {}", e.getMessage());
+            throw new RuntimeException("Impossible de charger le fichier JSON.", e);
         }
     }
 
