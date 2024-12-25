@@ -1279,3 +1279,351 @@
 2024-12-25T13:04:56.149+01:00 DEBUG 3844 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@4475b4b1, started on Wed Dec 25 13:04:53 CET 2024
 2024-12-25T13:04:56.157+01:00 DEBUG 3844 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@2feaa16c, started on Wed Dec 25 13:04:54 CET 2024
 2024-12-25T13:04:56.165+01:00 DEBUG 3844 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@3b5c6eee, started on Wed Dec 25 13:04:55 CET 2024
+2024-12-25T13:10:26.490+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.c.ChildAlertControllerTest         : Starting ChildAlertControllerTest using Java 17.0.12 with PID 456 (started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
+2024-12-25T13:10:26.493+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.a.c.ChildAlertControllerTest         : Running with Spring Boot v3.3.5, Spring v6.1.14
+2024-12-25T13:10:26.493+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.c.ChildAlertControllerTest         : No active profile set, falling back to 1 default profile: "default"
+2024-12-25T13:10:26.555+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65eb3597
+2024-12-25T13:10:31.442+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement des données JSON au démarrage de l'application...
+2024-12-25T13:10:31.442+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
+2024-12-25T13:10:31.443+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
+2024-12-25T13:10:31.701+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Données JSON chargées avec succès !
+2024-12-25T13:10:32.343+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 23 mappings in 'requestMappingHandlerMapping'
+2024-12-25T13:10:32.419+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-25T13:10:32.491+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-25T13:10:32.588+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-25T13:10:33.172+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-12-25T13:10:33.172+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-12-25T13:10:33.172+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-12-25T13:10:33.193+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-25T13:10:33.208+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 36 ms
+2024-12-25T13:10:33.339+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.c.ChildAlertControllerTest         : Started ChildAlertControllerTest in 7.822 seconds (process running for 11.499)
+2024-12-25T13:10:33.668+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.ChildAlertController#getChildAlert(String)
+2024-12-25T13:10:33.714+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.controller.ChildAlertController    : Requête reçue pour les enfants habitant à l'adresse : 1509 Culver St
+2024-12-25T13:10:33.723+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.controller.ChildAlertController    : Réponse générée pour l'adresse 1509 Culver St : com.safetynet.alerts.dto.ChildAlertResponseDTO@41e35358
+2024-12-25T13:10:33.772+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-25T13:10:33.775+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.safetynet.alerts.dto.ChildAlertResponseDTO@41e35358]
+2024-12-25T13:10:34.192+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.c.CommunityEmailController         : Requête reçue pour les e-mails des habitants de la ville : Springfield
+2024-12-25T13:10:34.303+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.controller.DataController     : Requête reçue pour récupérer les données JSON.
+2024-12-25T13:10:34.364+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.controller.FireController     : Requête reçue pour l'adresse : 123 Main St
+2024-12-25T13:10:34.469+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.controller.FirestationController   : Requête reçue pour /firestation avec stationNumber=3
+2024-12-25T13:10:34.501+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.controller.FirestationController   : Requête reçue pour /firestation avec stationNumber=99
+2024-12-25T13:10:34.501+01:00  WARN 456 --- [SafetyNet Alerts] [main] c.s.a.controller.FirestationController   : Aucune personne trouvée pour la station 99
+2024-12-25T13:10:34.558+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.controller.FloodController    : Requête reçue pour les stations : [3]
+2024-12-25T13:10:34.560+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.controller.FloodController    : Requête reçue pour les stations : [99]
+2024-12-25T13:10:34.599+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-12-25T13:10:34.694+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.controller.PersonControllerTest    : Starting PersonControllerTest using Java 17.0.12 with PID 456 (started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
+2024-12-25T13:10:34.695+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.a.controller.PersonControllerTest    : Running with Spring Boot v3.3.5, Spring v6.1.14
+2024-12-25T13:10:34.695+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.controller.PersonControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2024-12-25T13:10:34.698+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@59d0f14b
+2024-12-25T13:10:35.442+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement des données JSON au démarrage de l'application...
+2024-12-25T13:10:35.442+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
+2024-12-25T13:10:35.442+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
+2024-12-25T13:10:35.462+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Données JSON chargées avec succès !
+2024-12-25T13:10:35.610+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 23 mappings in 'requestMappingHandlerMapping'
+2024-12-25T13:10:35.636+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-25T13:10:35.646+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-25T13:10:35.653+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-25T13:10:35.785+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-12-25T13:10:35.790+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-12-25T13:10:35.790+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-12-25T13:10:35.799+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-25T13:10:35.806+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 15 ms
+2024-12-25T13:10:35.837+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.controller.PersonControllerTest    : Started PersonControllerTest in 1.238 seconds (process running for 13.997)
+2024-12-25T13:10:35.852+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#getAllPersons()
+2024-12-25T13:10:35.853+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.controller.PersonController   : J'ai reçu une demande GET pour récupérer toutes les personnes.
+2024-12-25T13:10:35.859+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-25T13:10:35.859+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.safetynet.alerts.model.Person@229762ab, com.safetynet.alerts.model.Person@6a938034]]
+2024-12-25T13:10:35.922+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#updatePerson(String, String, Person)
+2024-12-25T13:10:35.943+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.Person@705b4359]
+2024-12-25T13:10:35.949+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.controller.PersonController   : Requête PUT reçue pour: John Doe
+2024-12-25T13:10:35.951+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.controller.PersonController   : Corps de la requête: com.safetynet.alerts.model.Person@705b4359
+2024-12-25T13:10:35.952+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.controller.PersonController   : Personne mise à jour avec succès: com.safetynet.alerts.model.Person@2e706bc6
+2024-12-25T13:10:35.955+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-25T13:10:35.956+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.safetynet.alerts.model.Person@2e706bc6]
+2024-12-25T13:10:35.971+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#deletePerson(String, String)
+2024-12-25T13:10:35.972+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.controller.PersonController   : J'ai reçu une demande de SUPPRESSION pour supprimer une personne: John Doe
+2024-12-25T13:10:35.972+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.controller.PersonController   : La personne a été supprimée avec succès: John Doe
+2024-12-25T13:10:35.972+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-25T13:10:35.972+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2024-12-25T13:10:35.996+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#addPerson(Person)
+2024-12-25T13:10:35.997+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.Person@18ea91d7]
+2024-12-25T13:10:35.997+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.controller.PersonController   : Received POST request to add a new person: com.safetynet.alerts.model.Person@18ea91d7
+2024-12-25T13:10:35.997+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-25T13:10:35.997+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.safetynet.alerts.model.Person@33cbd883]
+2024-12-25T13:10:36.077+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.controller.PhoneAlertController    : Requête reçue pour les numéros de téléphone de la caserne : 99
+2024-12-25T13:10:36.085+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.controller.PhoneAlertController    : Requête reçue pour les numéros de téléphone de la caserne : 3
+2024-12-25T13:10:36.133+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Tentative de sauvegarde de la station: com.safetynet.alerts.model.FireStationCRUD@74f6fa34
+2024-12-25T13:10:36.133+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Recherche de la station avec l'adresse: 123 Main St
+2024-12-25T13:10:36.140+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Station existante remplacée: {}
+2024-12-25T13:10:36.140+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Station sauvegardée avec succès: com.safetynet.alerts.model.FireStationCRUD@74f6fa34
+2024-12-25T13:10:36.140+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Début de la mise à jour dans le dépôt pour l'adresse actuelle : 123 Main St
+2024-12-25T13:10:36.140+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Mise à jour de l'adresse dans le dépôt : 123 Main St -> 456 Elm St
+2024-12-25T13:10:36.140+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Mise à jour du numéro de caserne dans le dépôt : 1 -> 2
+2024-12-25T13:10:36.140+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Mise à jour réussie dans le dépôt pour l'adresse actuelle : 123 Main St
+2024-12-25T13:10:36.140+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Recherche de la station avec l'adresse: 456 Elm St
+2024-12-25T13:10:36.143+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Recherche de la station avec l'adresse: 456 Elm St
+2024-12-25T13:10:36.144+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Recherche de la station avec l'adresse: 123 Main St
+2024-12-25T13:10:36.146+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Tentative de sauvegarde de la station: com.safetynet.alerts.model.FireStationCRUD@4c89b58
+2024-12-25T13:10:36.146+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Recherche de la station avec l'adresse: 123 Main St
+2024-12-25T13:10:36.146+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Station existante remplacée: {}
+2024-12-25T13:10:36.146+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Station sauvegardée avec succès: com.safetynet.alerts.model.FireStationCRUD@4c89b58
+2024-12-25T13:10:36.146+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Recherche de la station avec l'adresse: 123 Main St
+2024-12-25T13:10:36.146+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Tentative de sauvegarde de la station: com.safetynet.alerts.model.FireStationCRUD@472cf6af
+2024-12-25T13:10:36.146+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Recherche de la station avec l'adresse: 123 Main St
+2024-12-25T13:10:36.146+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Station existante remplacée: {}
+2024-12-25T13:10:36.146+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Station sauvegardée avec succès: com.safetynet.alerts.model.FireStationCRUD@472cf6af
+2024-12-25T13:10:36.146+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Tentative de sauvegarde de la station: com.safetynet.alerts.model.FireStationCRUD@1fab1909
+2024-12-25T13:10:36.146+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Recherche de la station avec l'adresse: 456 Elm St
+2024-12-25T13:10:36.154+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Station existante remplacée: {}
+2024-12-25T13:10:36.155+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Station sauvegardée avec succès: com.safetynet.alerts.model.FireStationCRUD@1fab1909
+2024-12-25T13:10:36.155+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Récupération de toutes les stations enregistrées. Nombre total: 2
+2024-12-25T13:10:36.157+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Début de la mise à jour dans le dépôt pour l'adresse actuelle : Unknown Address
+2024-12-25T13:10:36.157+01:00  WARN 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Aucune station trouvée dans le dépôt pour l'adresse : Unknown Address
+2024-12-25T13:10:36.173+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Tentative de sauvegarde de la station: com.safetynet.alerts.model.FireStationCRUD@67807d9a
+2024-12-25T13:10:36.173+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Recherche de la station avec l'adresse: 123 Main St
+2024-12-25T13:10:36.173+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Station existante remplacée: {}
+2024-12-25T13:10:36.173+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Station sauvegardée avec succès: com.safetynet.alerts.model.FireStationCRUD@67807d9a
+2024-12-25T13:10:36.173+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Tentative de suppression de la station avec l'adresse: 123 Main St
+2024-12-25T13:10:36.173+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Recherche de la station avec l'adresse: 123 Main St
+2024-12-25T13:10:36.173+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Tentative de suppression de la station avec l'adresse: Unknown Address
+2024-12-25T13:10:36.181+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Tentative de sauvegarde de la station: com.safetynet.alerts.model.FireStationCRUD@7eb3ba2
+2024-12-25T13:10:36.184+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Recherche de la station avec l'adresse: 123 Main St
+2024-12-25T13:10:36.184+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Station existante remplacée: {}
+2024-12-25T13:10:36.184+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Station sauvegardée avec succès: com.safetynet.alerts.model.FireStationCRUD@7eb3ba2
+2024-12-25T13:10:36.184+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Tentative de sauvegarde de la station: com.safetynet.alerts.model.FireStationCRUD@404f1907
+2024-12-25T13:10:36.184+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Recherche de la station avec l'adresse: 123 Main St
+2024-12-25T13:10:36.184+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Station existante remplacée: {}
+2024-12-25T13:10:36.184+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Station sauvegardée avec succès: com.safetynet.alerts.model.FireStationCRUD@404f1907
+2024-12-25T13:10:36.184+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Récupération de toutes les stations enregistrées. Nombre total: 1
+2024-12-25T13:10:36.184+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Recherche de la station avec l'adresse: 123 Main St
+2024-12-25T13:10:36.197+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Tentative de sauvegarde de la station: com.safetynet.alerts.model.FireStationCRUD@2447d039
+2024-12-25T13:10:36.197+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Recherche de la station avec l'adresse: 123 Main St
+2024-12-25T13:10:36.197+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Station existante remplacée: {}
+2024-12-25T13:10:36.197+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Station sauvegardée avec succès: com.safetynet.alerts.model.FireStationCRUD@2447d039
+2024-12-25T13:10:36.198+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Recherche de la station avec l'adresse: 123 Main St
+2024-12-25T13:10:36.201+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.r.FireStationRepositoryCRUD        : Recherche de la station avec l'adresse: Unknown Address
+2024-12-25T13:10:36.232+01:00  INFO 456 --- [SafetyNet Alerts] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.SafetyNetAlertsApplicationTests]: SafetyNetAlertsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-25T13:10:36.253+01:00  INFO 456 --- [SafetyNet Alerts] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetyNetAlertsApplication for test class com.safetynet.alerts.SafetyNetAlertsApplicationTests
+2024-12-25T13:10:36.273+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-12-25T13:10:36.339+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Starting SafetyNetAlertsApplicationTests using Java 17.0.12 with PID 456 (started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
+2024-12-25T13:10:36.339+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Running with Spring Boot v3.3.5, Spring v6.1.14
+2024-12-25T13:10:36.339+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2024-12-25T13:10:36.347+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7aab70e2
+2024-12-25T13:10:36.870+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement des données JSON au démarrage de l'application...
+2024-12-25T13:10:36.870+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
+2024-12-25T13:10:36.870+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
+2024-12-25T13:10:36.886+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Données JSON chargées avec succès !
+2024-12-25T13:10:37.018+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 23 mappings in 'requestMappingHandlerMapping'
+2024-12-25T13:10:37.035+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-25T13:10:37.038+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-25T13:10:37.045+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-25T13:10:37.148+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-25T13:10:37.168+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.SafetyNetAlertsApplicationTests    : Started SafetyNetAlertsApplicationTests in 0.895 seconds (process running for 15.334)
+2024-12-25T13:10:37.183+01:00  INFO 456 --- [SafetyNet Alerts] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.service.ChildAlertServiceTest]: ChildAlertServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-25T13:10:37.229+01:00  INFO 456 --- [SafetyNet Alerts] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetyNetAlertsApplication for test class com.safetynet.alerts.service.ChildAlertServiceTest
+2024-12-25T13:10:37.243+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-12-25T13:10:37.283+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.service.ChildAlertServiceTest      : Starting ChildAlertServiceTest using Java 17.0.12 with PID 456 (started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
+2024-12-25T13:10:37.283+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.a.service.ChildAlertServiceTest      : Running with Spring Boot v3.3.5, Spring v6.1.14
+2024-12-25T13:10:37.283+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.service.ChildAlertServiceTest      : No active profile set, falling back to 1 default profile: "default"
+2024-12-25T13:10:37.290+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@281edf6b
+2024-12-25T13:10:37.854+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 23 mappings in 'requestMappingHandlerMapping'
+2024-12-25T13:10:37.891+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-25T13:10:37.897+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-25T13:10:37.902+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-25T13:10:38.107+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-25T13:10:38.153+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.service.ChildAlertServiceTest      : Started ChildAlertServiceTest in 0.911 seconds (process running for 16.321)
+2024-12-25T13:10:38.175+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.ChildAlertService     : Recherche des enfants pour l'adresse : 1509 Culver St
+2024-12-25T13:10:38.176+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.ChildAlertService     : Données récupérées depuis le DataService : com.safetynet.alerts.model.DataWrapper@19a13874
+2024-12-25T13:10:38.176+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.ChildAlertService     : Nombre de personnes trouvées à l'adresse 1509 Culver St : 3
+2024-12-25T13:10:38.179+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.ChildAlertService     : Enfant trouvé : Tenley Boyd, âge : 9
+2024-12-25T13:10:38.183+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.ChildAlertService     : Nombre d'enfants : 1, Nombre d'adultes : 2
+2024-12-25T13:10:38.188+01:00  INFO 456 --- [SafetyNet Alerts] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.service.CommunityEmailServiceTest]: CommunityEmailServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-25T13:10:38.202+01:00  INFO 456 --- [SafetyNet Alerts] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetyNetAlertsApplication for test class com.safetynet.alerts.service.CommunityEmailServiceTest
+2024-12-25T13:10:38.223+01:00  INFO 456 --- [SafetyNet Alerts] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.service.DataServiceTest]: DataServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-25T13:10:38.233+01:00  INFO 456 --- [SafetyNet Alerts] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetyNetAlertsApplication for test class com.safetynet.alerts.service.DataServiceTest
+2024-12-25T13:10:39.466+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement des données JSON au démarrage de l'application...
+2024-12-25T13:10:39.466+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
+2024-12-25T13:10:39.466+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chemin du fichier : null
+2024-12-25T13:10:39.466+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Données JSON chargées avec succès !
+2024-12-25T13:10:39.473+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.FireService   : Recherche des habitants pour l'adresse : 456 Unknown St
+2024-12-25T13:10:39.473+01:00  WARN 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.FireService   : Aucune caserne trouvée pour l'adresse 456 Unknown St
+2024-12-25T13:10:39.482+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.FireService   : Recherche des habitants pour l'adresse : 1509 Culver St
+2024-12-25T13:10:39.486+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.FireService   : Station associée : 3
+2024-12-25T13:10:39.494+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Récupération des informations pour la caserne n°3
+2024-12-25T13:10:39.494+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Adresses couvertes par la caserne n°3: [1509 Culver St]
+2024-12-25T13:10:39.494+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Personnes trouvées pour la caserne n°3: [com.safetynet.alerts.model.Person@7af5cf2a, com.safetynet.alerts.model.Person@37cc103c]
+2024-12-25T13:10:39.494+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Vérification de l'âge pour la personne: John Boyd
+2024-12-25T13:10:39.502+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Vérification de l'âge pour la personne: Jane Doe
+2024-12-25T13:10:39.502+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Nombre d'enfants pour la caserne n°3: 1
+2024-12-25T13:10:39.502+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Nombre d'adultes pour la caserne n°3: 1
+2024-12-25T13:10:39.502+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Réponse préparée pour la caserne n°3: com.safetynet.alerts.dto.FirestationResponseDTO@16c574c4
+2024-12-25T13:10:39.502+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Mise à jour de la station avec l'adresse actuelle : Unknown Address
+2024-12-25T13:10:39.502+01:00  WARN 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Station introuvable pour l'adresse : Unknown Address
+2024-12-25T13:10:39.510+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Récupération des informations pour la caserne n°99
+2024-12-25T13:10:39.518+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Adresses couvertes par la caserne n°99: []
+2024-12-25T13:10:39.518+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Personnes trouvées pour la caserne n°99: []
+2024-12-25T13:10:39.518+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Nombre d'enfants pour la caserne n°99: 0
+2024-12-25T13:10:39.518+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Nombre d'adultes pour la caserne n°99: 0
+2024-12-25T13:10:39.518+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Réponse préparée pour la caserne n°99: com.safetynet.alerts.dto.FirestationResponseDTO@1e20dad5
+2024-12-25T13:10:39.526+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Mise à jour de la station avec l'adresse actuelle : 1509 Culver St
+2024-12-25T13:10:39.528+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Adresse mise à jour : 1509 Culver St -> 123 New St
+2024-12-25T13:10:39.528+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.FirestationService    : Numéro de caserne mis à jour : 5 -> 5
+2024-12-25T13:10:39.532+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.FloodService  : Recherche des foyers pour les stations : [3]
+2024-12-25T13:10:39.532+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.FloodService  : Adresses trouvées : [1509 Culver St]
+2024-12-25T13:10:39.532+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.FloodService  : Résultats pour les foyers : 1
+2024-12-25T13:10:39.540+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.FloodService  : Recherche des foyers pour les stations : [99]
+2024-12-25T13:10:39.540+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.FloodService  : Adresses trouvées : []
+2024-12-25T13:10:39.540+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.FloodService  : Résultats pour les foyers : 0
+2024-12-25T13:10:39.558+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-12-25T13:10:39.602+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.s.MedicalRecordServiceCRUDTest     : Starting MedicalRecordServiceCRUDTest using Java 17.0.12 with PID 456 (started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
+2024-12-25T13:10:39.602+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.a.s.MedicalRecordServiceCRUDTest     : Running with Spring Boot v3.3.5, Spring v6.1.14
+2024-12-25T13:10:39.610+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.s.MedicalRecordServiceCRUDTest     : No active profile set, falling back to 1 default profile: "default"
+2024-12-25T13:10:39.610+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@66709528
+2024-12-25T13:10:40.134+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement des données JSON au démarrage de l'application...
+2024-12-25T13:10:40.134+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
+2024-12-25T13:10:40.134+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
+2024-12-25T13:10:40.149+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Données JSON chargées avec succès !
+2024-12-25T13:10:40.244+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 23 mappings in 'requestMappingHandlerMapping'
+2024-12-25T13:10:40.264+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-25T13:10:40.272+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-25T13:10:40.277+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-25T13:10:40.375+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-25T13:10:40.402+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.s.MedicalRecordServiceCRUDTest     : Started MedicalRecordServiceCRUDTest in 0.844 seconds (process running for 18.563)
+2024-12-25T13:10:40.410+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.service.MedicalRecordServiceCRUD   : Suppression du dossier médical pour : Unknown Person
+2024-12-25T13:10:40.421+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.service.MedicalRecordServiceCRUD   : Recherche du dossier médical pour : Unknown Person
+2024-12-25T13:10:40.430+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.service.MedicalRecordServiceCRUD   : Tentative de mise à jour du dossier médical pour : NonExistent User
+2024-12-25T13:10:40.431+01:00  WARN 456 --- [SafetyNet Alerts] [main] c.s.a.service.MedicalRecordServiceCRUD   : Aucun dossier médical trouvé pour : NonExistent User
+2024-12-25T13:10:40.439+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.service.MedicalRecordServiceCRUD   : Recherche du dossier médical pour : John Doe
+2024-12-25T13:10:40.451+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.service.MedicalRecordServiceCRUD   : Suppression du dossier médical pour : John Doe
+2024-12-25T13:10:40.460+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.service.MedicalRecordServiceCRUD   : Ajout du dossier médical : com.safetynet.alerts.model.MedicalRecordCRUD@5e1b425
+2024-12-25T13:10:40.470+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.service.MedicalRecordServiceCRUD   : Tentative de mise à jour du dossier médical pour : John Doe
+2024-12-25T13:10:40.471+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.a.service.MedicalRecordServiceCRUD   : Dossier médical existant trouvé : com.safetynet.alerts.model.MedicalRecordCRUD@1558b8e7
+2024-12-25T13:10:40.471+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.service.MedicalRecordServiceCRUD   : Dossier médical mis à jour avec succès pour : John Doe
+2024-12-25T13:10:40.492+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-12-25T13:10:40.559+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.s.PersonInfoLastNameServiceTest    : Starting PersonInfoLastNameServiceTest using Java 17.0.12 with PID 456 (started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
+2024-12-25T13:10:40.560+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.a.s.PersonInfoLastNameServiceTest    : Running with Spring Boot v3.3.5, Spring v6.1.14
+2024-12-25T13:10:40.563+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.s.PersonInfoLastNameServiceTest    : No active profile set, falling back to 1 default profile: "default"
+2024-12-25T13:10:40.567+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@599cc8a8
+2024-12-25T13:10:41.085+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 23 mappings in 'requestMappingHandlerMapping'
+2024-12-25T13:10:41.116+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-25T13:10:41.122+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-25T13:10:41.126+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-25T13:10:41.209+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-12-25T13:10:41.209+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-12-25T13:10:41.209+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-12-25T13:10:41.209+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-25T13:10:41.217+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 8 ms
+2024-12-25T13:10:41.256+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.s.PersonInfoLastNameServiceTest    : Started PersonInfoLastNameServiceTest in 0.764 seconds (process running for 19.416)
+2024-12-25T13:10:41.266+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.service.PersonInfoLastNameService  : Recherche les informations des habitants avec le nom : Boyd
+2024-12-25T13:10:41.292+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-12-25T13:10:41.354+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.PersonServiceTest     : Starting PersonServiceTest using Java 17.0.12 with PID 456 (started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
+2024-12-25T13:10:41.355+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.PersonServiceTest     : Running with Spring Boot v3.3.5, Spring v6.1.14
+2024-12-25T13:10:41.355+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.PersonServiceTest     : No active profile set, falling back to 1 default profile: "default"
+2024-12-25T13:10:41.358+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@445b7f80
+2024-12-25T13:10:41.895+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement des données JSON au démarrage de l'application...
+2024-12-25T13:10:41.895+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
+2024-12-25T13:10:41.896+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
+2024-12-25T13:10:41.910+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Données JSON chargées avec succès !
+2024-12-25T13:10:42.006+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 23 mappings in 'requestMappingHandlerMapping'
+2024-12-25T13:10:42.018+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-25T13:10:42.022+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-25T13:10:42.026+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-25T13:10:42.124+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-12-25T13:10:42.124+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-12-25T13:10:42.124+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-12-25T13:10:42.134+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-25T13:10:42.139+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 15 ms
+2024-12-25T13:10:42.160+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.PersonServiceTest     : Started PersonServiceTest in 0.868 seconds (process running for 20.323)
+2024-12-25T13:10:42.168+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.PersonService         : Fetching all persons.
+2024-12-25T13:10:42.179+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.PersonService         : Attempting to update person: John Doe
+2024-12-25T13:10:42.180+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.PersonService         : Existing person found: com.safetynet.alerts.model.Person@66ffee26
+2024-12-25T13:10:42.180+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.PersonService         : Person updated successfully: com.safetynet.alerts.model.Person@66ffee26
+2024-12-25T13:10:42.185+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.PersonService         : Attempting to delete person: John Doe
+2024-12-25T13:10:42.193+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.PersonService         : Adding a new person: com.safetynet.alerts.model.Person@423d31b0
+2024-12-25T13:10:42.209+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.PhoneAlertService     : Recherche des numéros de téléphone pour la caserne : 99
+2024-12-25T13:10:42.217+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.alerts.service.PhoneAlertService     : Recherche des numéros de téléphone pour la caserne : 3
+2024-12-25T13:10:42.240+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-12-25T13:10:42.310+01:00  INFO 456 --- [SafetyNet Alerts] [main] MedicalRecordControllerCRUDTest          : Starting MedicalRecordControllerCRUDTest using Java 17.0.12 with PID 456 (started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
+2024-12-25T13:10:42.311+01:00  INFO 456 --- [SafetyNet Alerts] [main] MedicalRecordControllerCRUDTest          : No active profile set, falling back to 1 default profile: "default"
+2024-12-25T13:10:42.314+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2b9c0e52
+2024-12-25T13:10:42.763+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement des données JSON au démarrage de l'application...
+2024-12-25T13:10:42.763+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
+2024-12-25T13:10:42.763+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
+2024-12-25T13:10:42.774+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Données JSON chargées avec succès !
+2024-12-25T13:10:42.859+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 23 mappings in 'requestMappingHandlerMapping'
+2024-12-25T13:10:42.871+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-25T13:10:42.880+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-25T13:10:42.887+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-25T13:10:42.985+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-12-25T13:10:42.985+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-12-25T13:10:42.985+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-12-25T13:10:42.986+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-25T13:10:42.997+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 12 ms
+2024-12-25T13:10:43.014+01:00  INFO 456 --- [SafetyNet Alerts] [main] MedicalRecordControllerCRUDTest          : Started MedicalRecordControllerCRUDTest in 0.774 seconds (process running for 21.179)
+2024-12-25T13:10:43.034+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#deleteMedicalRecord(String, String)
+2024-12-25T13:10:43.038+01:00  WARN 456 --- [SafetyNet Alerts] [main] c.s.a.c.MedicalRecordControllerCRUD      : Impossible de trouver le dossier médical pour suppression : Unknown Person
+2024-12-25T13:10:43.039+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-25T13:10:43.039+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2024-12-25T13:10:43.050+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#getMedicalRecordByFullName(String, String)
+2024-12-25T13:10:43.056+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.c.MedicalRecordControllerCRUD      : Requête GET reçue pour firstName: Unknown, lastName: Person
+2024-12-25T13:10:43.056+01:00  WARN 456 --- [SafetyNet Alerts] [main] c.s.a.c.MedicalRecordControllerCRUD      : Dossier médical non trouvé pour : Unknown Person
+2024-12-25T13:10:43.056+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-25T13:10:43.056+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2024-12-25T13:10:43.079+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#updateMedicalRecord(String, String, MedicalRecordCRUD)
+2024-12-25T13:10:43.089+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecordCRUD@2568c451]
+2024-12-25T13:10:43.089+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.c.MedicalRecordControllerCRUD      : Requête PUT reçue pour firstName: NonExistent, lastName: User
+2024-12-25T13:10:43.089+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.c.MedicalRecordControllerCRUD      : Payload: com.safetynet.alerts.model.MedicalRecordCRUD@2568c451
+2024-12-25T13:10:43.089+01:00  WARN 456 --- [SafetyNet Alerts] [main] c.s.a.c.MedicalRecordControllerCRUD      : Dossier médical non trouvé pour : NonExistent User
+2024-12-25T13:10:43.089+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-25T13:10:43.089+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2024-12-25T13:10:43.112+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#getMedicalRecordByFullName(String, String)
+2024-12-25T13:10:43.113+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.c.MedicalRecordControllerCRUD      : Requête GET reçue pour firstName: John, lastName: Doe
+2024-12-25T13:10:43.113+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.c.MedicalRecordControllerCRUD      : Dossier médical trouvé pour : John Doe
+2024-12-25T13:10:43.113+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] c.s.a.c.MedicalRecordControllerCRUD      : Dossier médical : com.safetynet.alerts.model.MedicalRecordCRUD@6d0dd338
+2024-12-25T13:10:43.115+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-25T13:10:43.115+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.safetynet.alerts.model.MedicalRecordCRUD@6d0dd338]
+2024-12-25T13:10:43.123+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#deleteMedicalRecord(String, String)
+2024-12-25T13:10:43.123+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.c.MedicalRecordControllerCRUD      : Dossier médical supprimé avec succès pour : John Doe
+2024-12-25T13:10:43.123+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-25T13:10:43.123+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2024-12-25T13:10:43.145+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#addMedicalRecord(MedicalRecordCRUD)
+2024-12-25T13:10:43.146+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecordCRUD@2cb74f29]
+2024-12-25T13:10:43.147+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-25T13:10:43.150+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.safetynet.alerts.model.MedicalRecordCRUD@153412a1]
+2024-12-25T13:10:43.161+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordControllerCRUD#updateMedicalRecord(String, String, MedicalRecordCRUD)
+2024-12-25T13:10:43.161+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecordCRUD@1088a4f0]
+2024-12-25T13:10:43.161+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.c.MedicalRecordControllerCRUD      : Requête PUT reçue pour firstName: John, lastName: Doe
+2024-12-25T13:10:43.161+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.c.MedicalRecordControllerCRUD      : Payload: com.safetynet.alerts.model.MedicalRecordCRUD@1088a4f0
+2024-12-25T13:10:43.161+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.s.a.c.MedicalRecordControllerCRUD      : Mise à jour réussie pour le dossier médical de : John Doe
+2024-12-25T13:10:43.161+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-25T13:10:43.161+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2024-12-25T13:10:43.190+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-12-25T13:10:43.236+01:00  INFO 456 --- [SafetyNet Alerts] [main] PersonInfoLastNameControllerTest         : Starting PersonInfoLastNameControllerTest using Java 17.0.12 with PID 456 (started by hacha in C:\wamp64\www\openclassrooms\P5-Créez votre première application web avec Spring Boot\SafetyNetAlerts)
+2024-12-25T13:10:43.237+01:00  INFO 456 --- [SafetyNet Alerts] [main] PersonInfoLastNameControllerTest         : No active profile set, falling back to 1 default profile: "default"
+2024-12-25T13:10:43.239+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7767c18d
+2024-12-25T13:10:43.671+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement des données JSON au démarrage de l'application...
+2024-12-25T13:10:43.671+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chargement du fichier JSON...
+2024-12-25T13:10:43.671+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Chemin du fichier : data.json
+2024-12-25T13:10:43.679+01:00  INFO 456 --- [SafetyNet Alerts] [main] c.safetynet.alerts.service.DataService   : Données JSON chargées avec succès !
+2024-12-25T13:10:43.760+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 23 mappings in 'requestMappingHandlerMapping'
+2024-12-25T13:10:43.774+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-25T13:10:43.779+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-25T13:10:43.779+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-25T13:10:43.866+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-12-25T13:10:43.869+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-12-25T13:10:43.869+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-12-25T13:10:43.873+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-25T13:10:43.877+01:00  INFO 456 --- [SafetyNet Alerts] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 7 ms
+2024-12-25T13:10:43.898+01:00  INFO 456 --- [SafetyNet Alerts] [main] PersonInfoLastNameControllerTest         : Started PersonInfoLastNameControllerTest in 0.708 seconds (process running for 22.058)
+2024-12-25T13:10:43.909+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonInfoLastNameController#getPersonByLastName(String)
+2024-12-25T13:10:43.915+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-25T13:10:43.916+01:00 DEBUG 456 --- [SafetyNet Alerts] [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [[com.safetynet.alerts.dto.PersonInfoLastNameDTO@49ecd74f, com.safetynet.alerts.dto.PersonInfoLastNam (truncated)...]
+2024-12-25T13:10:43.948+01:00 DEBUG 456 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@65eb3597, started on Wed Dec 25 13:10:26 CET 2024
+2024-12-25T13:10:43.956+01:00 DEBUG 456 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@59d0f14b, started on Wed Dec 25 13:10:34 CET 2024
+2024-12-25T13:10:43.956+01:00 DEBUG 456 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@7aab70e2, started on Wed Dec 25 13:10:36 CET 2024
+2024-12-25T13:10:43.967+01:00 DEBUG 456 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@281edf6b, started on Wed Dec 25 13:10:37 CET 2024
+2024-12-25T13:10:43.975+01:00 DEBUG 456 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@66709528, started on Wed Dec 25 13:10:39 CET 2024
+2024-12-25T13:10:43.975+01:00 DEBUG 456 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@599cc8a8, started on Wed Dec 25 13:10:40 CET 2024
+2024-12-25T13:10:43.985+01:00 DEBUG 456 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@445b7f80, started on Wed Dec 25 13:10:41 CET 2024
+2024-12-25T13:10:43.988+01:00 DEBUG 456 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@2b9c0e52, started on Wed Dec 25 13:10:42 CET 2024
+2024-12-25T13:10:43.990+01:00 DEBUG 456 --- [SafetyNet Alerts] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@7767c18d, started on Wed Dec 25 13:10:43 CET 2024
