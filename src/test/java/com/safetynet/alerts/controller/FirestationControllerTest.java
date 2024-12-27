@@ -23,7 +23,7 @@ import static org.mockito.Mockito.when;
  * Classe de test pour {@link FirestationController}.
  * Vérifie le bon fonctionnement du point de terminaison {@code /firestationCRUD}.
  */
-class FirestationControllerTest {
+class  FirestationControllerTest {
 
     @Mock
     private FirestationService firestationService;

@@ -25,7 +25,7 @@ import static org.mockito.Mockito.when;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class ChildAlertControllerTest {
+public class   ChildAlertControllerTest {
 
     @Autowired
     private MockMvc mockMvc;

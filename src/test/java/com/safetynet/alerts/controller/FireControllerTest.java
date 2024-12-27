@@ -1,5 +1,4 @@
 package com.safetynet.alerts.controller;
-
 import com.safetynet.alerts.dto.FireDTO;
 import com.safetynet.alerts.service.FireService;
 import org.junit.jupiter.api.BeforeEach;
@@ -18,7 +17,6 @@ import static org.mockito.Mockito.when;
  * Vérifie le bon fonctionnement de l'endpoint {@code /fire}.
  */
 class FireControllerTest {
-
     @Mock
     private FireService fireService;
 
@@ -39,13 +37,10 @@ class FireControllerTest {
         List<FireDTO> mockFireDTOs = Arrays.asList(
                 new FireDTO("John", "Doe", 33, "123-456-7890", Arrays.asList("Aspirin"), Arrays.asList("Peanuts"), "1")
         );
-
         // Simuler le comportement du service
         when(fireService.getFireInfo(address)).thenReturn(mockFireDTOs);
-
         // Appel de la méthode du contrôleur
         List<FireDTO> result = fireController.getFireInfo(address);
-
         // Vérification
         assertEquals(mockFireDTOs, result, "Les données retournées par le contrôleur doivent correspondre à celles du service.");
     }
